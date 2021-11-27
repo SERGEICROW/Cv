@@ -1,6 +1,10 @@
+import {Container} from "@chakra-ui/react";
+import Section from "../components/section";
+
 const Experience = () => (
 
-    <main className="relative z-30 p-5 text-2xl text-yellow-400">
+    <Container className="relative z-30 p-5 text-2xl text-yellow-400">
+        <Section>
         <p className="flex flex-col items-center justify-center z-30 mt-3 text-2xl">
             Welcome to my website
         </p>
@@ -16,7 +20,8 @@ const Experience = () => (
                 </p>
             </a>
         </div>
-    </main>
+        </Section>
+    </Container>
 )
 
 export default Experience

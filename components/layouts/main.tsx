@@ -13,7 +13,7 @@ const Main = ({children, router}) => {
         <div>
             <Head>
                 <title>Rodrigo - Homepage</title>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href="/doomguy.gif"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="description" content="Rodrigo's homepage"/>
                 <meta name="author" content="Rodrigo Yanez"/>
