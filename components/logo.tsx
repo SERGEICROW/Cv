@@ -10,6 +10,10 @@ const LogoBox = styled.span`
   }
 `
 
+const ArrowBox = styled.span`
+  
+`
+
 const Logo = () => {
     const doomguy = `/doomguy.gif`
 
@@ -29,9 +33,9 @@ export const LogoArrow = () => {
     const arrow = '/arrow.svg'
 
     return (
-        <LogoBox>
-            <Image src={arrow} width={15} height={15} alt='arrow'/>
-        </LogoBox>
+        <ArrowBox>
+            <Image src={arrow} width={20} height={20} alt='arrow'/>
+        </ArrowBox>
     )
 }
 
