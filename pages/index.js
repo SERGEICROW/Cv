@@ -1,14 +1,17 @@
 import Section from "../components/section";
-import {Container, Box, Heading} from "@chakra-ui/react";
+import Bio from "../components/bio";
+
+
+import {Container, Box, Heading, Image} from "@chakra-ui/react";
 
 
 const Home = () => (
 
-    <Container className="relative z-30 py-16 flex flex-col items-center justify-center">
+    <Container className="relative z-30 py-16 flex flex-col items-center justify-center
+    border border-yellow-300 min-h-screen">
         <Section>
-            <div className="min-w-min min-h-min p-2 text-5xlxl border border-yellow-300 text-yellow-400 ">
-                Rodrigo I. Yanez Carvajal
-            </div>
+            <Bio/>
+
         </Section>
     </Container>
 )

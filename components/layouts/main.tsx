@@ -12,8 +12,8 @@ const Main = ({children, router}) => {
     return (
         <div>
             <Head>
-                <title>Rodrigo - Homepage</title>
-                <link rel="icon" href="/doomguy.gif"/>
+                <title>Rodrigo's - Homepage</title>
+                <link rel="icon" href="/cv.jpg"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="description" content="Rodrigo's homepage"/>
                 <meta name="author" content="Rodrigo Yanez"/>

@@ -24,8 +24,8 @@ const LinkItem = ({href, children, ...props}) => {
     return (
         <NextLink href={href} passHref>
             <div
-                className={active ? "border border-green-400 text-green-400 px-3 py-2 rounded-md text-xl font-medium cursor-pointer" : "text-gray-300 hover:text-green-400\n" +
-                    "// px-3 py-2 rounded-md text-xl font-medium cursor-pointer"}
+                className={active ? "border border-green-400 text-green-400 px-2 py-2 rounded-md text-xl font-medium cursor-pointer" :
+                    "text-gray-300 hover:text-green-400 px-2 py-2 rounded-md text-xl font-medium cursor-pointer border border-transparent"}
                 {...props}
             >
                 {children}
@@ -39,7 +39,12 @@ const LinkLogo = ({href, children, ...props}) => {
     const active = path === href
     return (
         <NextLink href={href} passHref>
-            <div{...props}>{children}</div>
+            <div
+                className={active ? "text-white text-2xl animate-bounce h-6 cursor-pointer" : "text-white text-2xl cursor-pointer "}
+                {...props}
+            >
+                {children}
+            </div>
         </NextLink>
     )
 }
@@ -49,7 +54,7 @@ const Navbar = props => {
     const {path} = props
 
     return (
-        <Disclosure as="nav" className="backdrop-blur-sm z-40 fixed w-auto min-w-full max-w-none">
+        <Disclosure as="nav" className="backdrop-blur-sm  z-40 fixed w-auto min-w-full max-w-none h-16">
             {({open}) => (
                 <>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -74,7 +79,8 @@ const Navbar = props => {
 
                                 <div className="flex-shrink-0 flex items-center">
                                     <LinkLogo href="/" path={path}>
-                                        <h3 className="text-white text-2xl">Roy's CV</h3>
+                                        <Logo/>
+                                        {/*<h3>Roy's CV</h3>*/}
                                     </LinkLogo>
                                 </div>
 

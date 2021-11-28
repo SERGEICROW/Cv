@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
@@ -13,16 +11,27 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const footPrintImg = `/`
+    const doomguy = `/doomguy.gif`
 
     return (
                 <LogoBox className="flex p-2">
-                    <Image src={footPrintImg} width={35} height={1} alt="logo" />
+                    <Image src={doomguy} width={35} height={1} alt="logo" />
                     <h5 className="text-white text-2xl">
-                        Roy's Cv
+                        Rodrigo Yanez
                     </h5>
                 </LogoBox>
     )
 }
 
 export default Logo
+
+export const LogoArrow = () => {
+    const arrow = '/arrow.svg'
+
+    return (
+        <LogoBox>
+            <Image src={arrow} width={15} height={15} alt='arrow'/>
+        </LogoBox>
+    )
+}
+
