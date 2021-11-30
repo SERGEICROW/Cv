@@ -2,7 +2,9 @@ import Section from "../components/section";
 import Bio from "../components/bio";
 
 
-import {Container, Box, Heading, Image} from "@chakra-ui/react";
+
+import {Container} from "@chakra-ui/react";
+import Timeline from "../components/timeline";
 
 
 const Home = () => (
