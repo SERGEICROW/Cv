@@ -5,7 +5,7 @@ import {TimelineSection} from "./containers";
 
 const Bio = () => {
     return (
-        <Container className="max-w-2xl m-5 border border-blue-400">
+        <Container className="max-w-2xl min-h m-5 border border-blue-400">
             <div className="flex flex-wrap justify-evenly items-center border border-yellow-50 border-dotted">
                 <div>
                     <Heading className="min-w-min min-h-min flex justify-center

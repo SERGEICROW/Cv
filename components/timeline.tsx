@@ -1,8 +1,9 @@
 import {Container, Heading} from "@chakra-ui/react";
-import React from "react";
 import styled from "@emotion/styled";
 import {LogoArrow} from "./logo";
 import Section from "./section";
+import {useState} from "react";
+
 
 const Bar0 = styled("hr")`
   width: 20%;
@@ -35,22 +36,27 @@ const Bar5 = styled("hr")`
   height: 10px;
 `
 
+const BarLink = ({children}) => {
+    // const active = false
+    const [active, setActive] = useState(false);
+
+    return (
+        <div
+            className={active ? "text-red-700" : "hidden"}
+        >
+            {children}
+        </div>
+    )
+}
+
 const Timeline = () => {
 
     const years1 = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
     const years2 = [12, 13, 14, 15, 16, 17, 18, 19, 10, 21]
     const sep = ["|", "|", "|", "|", "|", "|", "|", "|", "|", "|",]
 
-    // const [show, setShow] = React.useState(className="hidden")
-    //
-    // const onClick = () => setShow(false)
-    // return (
-    //     <div>
-    //         <h1 onClick={onClick}>
-    //             HOLA
-    //         </h1>
-    //     </div>
-    // )
+    const [active, setActive] = useState(false);
+
 
     return (
 
@@ -94,8 +100,9 @@ const Timeline = () => {
                     })}
                 </div>
 
-                <Section>
-                    <div className="m-6 flex flex-col bg-black rounded-lg bg-opacity-40 p-5 hidden ">
+                <div className="h-60 ">
+
+                    <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
                         <Heading className="text-gray-600">
                             2012-2015
                         </Heading>
@@ -107,13 +114,92 @@ const Timeline = () => {
                         </Heading>
                         <p className="pl-10 text-white text-justify">
                             <LogoArrow/>
-                            Born in 1993 in Mexico City, I am a dedicated, organized and methodical individual.
-                            With good interpersonal skills, am an excellent team worker, keen and very willing to
-                            learn and develop new skills. With an active and dynamic approach to work to identify
-                            and develop opportunities.
+                            FINANCES DEGREE
                         </p>
                     </div>
-                </Section>
+
+                    <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
+                        <Heading className="text-gray-600">
+                            Jun 2014-May 2017
+                        </Heading>
+                        <Heading className="text-blue-700">
+                            Multiple financial entities
+                        </Heading>
+                        <Heading>
+                            Broker
+                        </Heading>
+                        <p className="pl-10 text-white text-justify">
+                            <LogoArrow/>
+                            FINANCES WORK
+                        </p>
+                    </div>
+
+                    <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
+                        <Heading className="text-gray-600">
+                            Jul 2017-Oct 2019
+                        </Heading>
+                        <Heading className="text-yellow-700">
+                            Los Pambolitos
+                        </Heading>
+                        <Heading>
+                            Own bussisnes
+                        </Heading>
+                        <p className="pl-10 text-white text-justify">
+                            <LogoArrow/>
+                            LOS PAMBOLITOS
+                        </p>
+                    </div>
+
+                    <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
+                        <Heading className="text-gray-600">
+                            Jan 2019-Present
+                        </Heading>
+                        <Heading className="bg-gradient-to-r from-black via-pink-500 to-purple-600">
+                            Jet Brains Academy
+                        </Heading>
+                        <Heading>
+                            Courses
+                        </Heading>
+                        <p className="pl-10 text-white text-justify">
+                            <LogoArrow/>
+                            JET BRAINS
+                        </p>
+                    </div>
+
+                    <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
+                        <Heading className="text-gray-600">
+                            May 2019-Present
+                        </Heading>
+                        <Heading className="text-white bg-gradient-to-r from-red-700 via-red-900 to-transparent">
+                            UVM
+                        </Heading>
+                        <Heading>
+                            Software developer degree
+                        </Heading>
+                        <p className="pl-10 text-white text-justify">
+                            <LogoArrow/>
+                            SOFTWARE DEGREE
+                        </p>
+                    </div>
+
+                    <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
+                        <Heading className="text-gray-600">
+                            Apr 2021-Oct 2021
+                        </Heading>
+                        <Heading className="text-black bg-gradient-to-r from-yellow-400 via-green-500 to-transparent">
+                            BEDU
+                        </Heading>
+                        <Heading>
+                            Bootcamp
+                        </Heading>
+                        <p className="pl-10 text-white text-justify">
+                            <LogoArrow/>
+                            Full stack Bedu
+                        </p>
+                    </div>
+
+
+                </div>
 
             </Section>
         </Container>
