@@ -3,13 +3,12 @@ import Section from "../components/section";
 
 const Apis = () => (
 
-    <Container className="relative z-30 p-5 text-2xl text-yellow-400">
+    <Container className="relative z-30 py-16 flex flex-col items-center justify-center
+    border border-green-500 min-h-screen text-yellow-400">
         <Section>
-        <p className="flex flex-col items-center justify-center z-30 mt-3 text-2xl">
-            Welcome to my website
-        </p>
 
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+
+        <div className="flex flex-col items-center justify-center py-2">
             <a
                 href="#"
                 className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"

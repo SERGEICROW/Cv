@@ -3,7 +3,8 @@ import Section from "../components/section";
 
 const Experience = () => (
 
-    <Container className="relative z-30 p-5 text-2xl text-yellow-400">
+    <Container className="relative z-30 py-16 flex flex-col items-center justify-center
+    border border-green-500 min-h-screen text-yellow-400">
         <Section>
         <p className="flex flex-col items-center justify-center z-30 mt-3 text-2xl">
             Welcome to my website
