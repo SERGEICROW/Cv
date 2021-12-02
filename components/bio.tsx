@@ -1,11 +1,10 @@
 import {Container, Heading} from "@chakra-ui/react";
 import {LogoArrow} from "./logo";
 import Timeline from "./timeline";
-import {TimelineSection} from "./containers";
 
 const Bio = () => {
     return (
-        <Container className="max-w-2xl min-h m-5 ">
+        <Container className="max-w-2xl min-h m-5">
             <div className="mt-11 flex flex-wrap justify-evenly items-center ">
                 <div>
                     <Heading className="min-w-min min-h-min flex justify-center

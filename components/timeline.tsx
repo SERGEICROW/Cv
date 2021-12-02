@@ -1,44 +1,27 @@
-import {Container, Heading, Portal} from "@chakra-ui/react";
-import styled from "@emotion/styled";
+import {Container, Heading} from "@chakra-ui/react";
+import {useState} from "react";
 import {LogoArrow} from "./logo";
 import Section from "./section";
-import {useState} from "react";
-import className = Portal.className;
 
+import {Bar0, Bar1, Bar2, Bar3, Bar4, Bar5} from "./css";
 
-const Bar0 = styled("hr")`
-  width: 20%;
-  margin-left: 75%;
-  height: 10px;`
-const Bar1 = styled("hr")`
-  width: 29%;
-  margin-left: 30%;
-  height: 10px;`
-const Bar2 = styled("hr")`
-  width: 7%;
-  margin-left: 29%;
-  height: 10px;`
-const Bar3 = styled("hr")`
-  width: 21%;
-  margin-left: 59%;
-  height: 10px;`
-const Bar4 = styled("hr")`
-  width: 30%;
-  margin-left: 5%;
-  height: 10px;`
-const Bar5 = styled("hr")`
-  width: 15%;
-  margin-left: 45%;
-  height: 10px;`
-
-
-function Timeline() {
+export default function Timeline() {
 
     const years1 = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
     const years2 = [12, 13, 14, 15, 16, 17, 18, 19, 10, 21]
     const sep = ["|", "|", "|", "|", "|", "|", "|", "|", "|", "|",]
-    const [bars, setBars] = useState(null);
+    const [content, setContent] = useState(null);
 
+    const Refresh = ({children}) => {
+        const active = content != setContent
+        if (active) {
+            return (
+                <Section>
+                    {children}
+                </Section>
+            )
+        }
+    }
 
     return (
 
@@ -47,20 +30,20 @@ function Timeline() {
 
             <Section>
                 <div className="grid grid-rows-4 border-1-2 my-3">
-                    <Bar0 onClick={() => setBars(Bar3P)} className="rounded-full border-0 cursor-pointer my-1
+                    <Bar0 onClick={() => setContent(BarContent_3)} className="rounded-full border-0 cursor-pointer my-1
                 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"/>
                     <div className="flex">
-                        <Bar1 onClick={() => setBars(Bar1P)} className="rounded-full border-0 cursor-pointer my-1
+                        <Bar1 onClick={() => setContent(BarContent_1)} className="rounded-full border-0 cursor-pointer my-1
                     bg-gradient-to-r from-blue-900 to-blue-600"/>
-                        <Bar2 onClick={() => setBars(Bar5P)} className="rounded-full border-0 cursor-pointer my-1
+                        <Bar2 onClick={() => setContent(BarContent_5)} className="rounded-full border-0 cursor-pointer my-1
                     bg-gradient-to-r from-yellow-300 to-green-400"/>
                     </div>
-                    <Bar3 onClick={() => setBars(Bar2P)} className="rounded-full border-0 cursor-pointer my-1
+                    <Bar3 onClick={() => setContent(BarContent_2)} className="rounded-full border-0 cursor-pointer my-1
                 bg-gradient-to-r from-yellow-500 to-yellow-500"/>
                     <div className="flex">
-                        <Bar4 onClick={() => setBars(Bar0P)} className="rounded-full border-0 cursor-pointer my-1
+                        <Bar4 onClick={() => setContent(BarContent_0)} className="rounded-full border-0 cursor-pointer my-1
                     bg-gradient-to-r from-black via-green-700 to-green-700"/>
-                        <Bar5 onClick={() => setBars(Bar4P)} className="rounded-full border-0 cursor-pointer my-1
+                        <Bar5 onClick={() => setContent(BarContent_4)} className="rounded-full border-0 cursor-pointer my-1
                     bg-gradient-to-r from-red-800 via-red-600 to-red-900"/>
                     </div>
                 </div>
@@ -77,7 +60,7 @@ function Timeline() {
                 </div>
                 <hr className="relative bottom-1"/>
                 <div className="flex justify-around mb-5">
-                    {years1.map((i) => {
+                    {years2.map((i) => {
                         return (
                             <div className="animate-pulse">{i}</div>
                         );
@@ -85,41 +68,41 @@ function Timeline() {
                 </div>
 
                 <div className="h-48">
+
                     <div className="mx-7">
-                        {bars}
+                        <Refresh>
+                            {content}
+                        </Refresh>
                     </div>
+
                 </div>
+
             </Section>
         </Container>
-
-
     )
 }
 
-const Bar0P = () => {
+const BarContent_0 = () => {
     return (
-        <Section>
-            <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40">
-                <Heading className="text-gray-600">
-                    2012-2015
-                </Heading>
-                <Heading className="text-red-700">
-                    UVM
-                </Heading>
-                <Heading>
-                    Finances degree
-                </Heading>
-                <p className="pl-10 text-white text-justify">
-                    <LogoArrow/>
-                    FINANCES DEGREE
-                </p>
-            </div>
-        </Section>
+        <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40">
+            <Heading className="text-gray-600">
+                2012-2015
+            </Heading>
+            <Heading className="text-red-700">
+                UVM
+            </Heading>
+            <Heading>
+                Finances degree
+            </Heading>
+            <p className="pl-10 text-white text-justify">
+                <LogoArrow/>
+                FINANCES DEGREE
+            </p>
+        </div>
     )
 }
-const Bar1P = () => {
+const BarContent_1 = () => {
     return (
-        <Section>
             <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
                 <Heading className="text-gray-600">
                     Jun 2014-May 2017
@@ -135,12 +118,10 @@ const Bar1P = () => {
                     FINANCES WORK
                 </p>
             </div>
-        </Section>
     )
 }
-const Bar2P = () => {
+const BarContent_2 = () => {
     return (
-        <Section>
             <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
                 <Heading className="text-gray-600">
                     Jul 2017-Oct 2019
@@ -156,12 +137,10 @@ const Bar2P = () => {
                     LOS PAMBOLITOS
                 </p>
             </div>
-        </Section>
     )
 }
-const Bar3P = () => {
+const BarContent_3 = () => {
     return (
-        <Section>
             <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
                 <Heading className="text-gray-600">
                     Jan 2019-Present
@@ -177,12 +156,10 @@ const Bar3P = () => {
                     JET BRAINS
                 </p>
             </div>
-        </Section>
     )
 }
-const Bar4P = () => {
+const BarContent_4 = () => {
     return (
-        <Section>
             <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
                 <Heading className="text-gray-600">
                     May 2019-Present
@@ -198,12 +175,10 @@ const Bar4P = () => {
                     SOFTWARE DEGREE
                 </p>
             </div>
-        </Section>
     )
 }
-const Bar5P = () => {
+const BarContent_5 = () => {
     return (
-        <Section>
             <div className="mb-0 p-5 flex flex-col bg-black rounded-lg bg-opacity-40 ">
                 <Heading className="text-gray-600">
                     Apr 2021-Oct 2021
@@ -219,8 +194,6 @@ const Bar5P = () => {
                     Full stack Bedu
                 </p>
             </div>
-        </Section>
     )
 }
 
-export default Timeline
