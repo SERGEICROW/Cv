@@ -1,8 +1,17 @@
 import {Container, Heading} from "@chakra-ui/react";
-import {LogoArrow, StackArrow} from "./logo";
-import Section, {SectionDown, SectionRight} from "./section";
+import {StackArrow} from "./logo";
+import Section, {
+    FifTitle,
+    FiTitle,
+    FoTitle,
+    SectionDown,
+    SectionLeft,
+    SectionRight,
+    SeTitle, SiTitle,
+    ThTitle
+} from "./section";
 import React, {useState} from "react";
-import logo, {
+import {
     DebianIcon,
     GitIcon,
     IntellIcon,
@@ -12,7 +21,7 @@ import logo, {
     RedisIcon,
     SqliteIcon, VsIcon,
     WebsIcon, WindowsIcon
-} from "../components/logo"
+} from "./logo"
 import {
     PythonIcon,
     LanguagesIcon,
@@ -31,22 +40,30 @@ import {
     HtmlIcon,
     CssIcon,
     TailwindIcon,
-    AngularIcon,
     NextIcon,
     DjangoIcon,
     NodeIcon,
     RestIcon,
     GraphIcon,
     DockerIcon
-} from "../components/logo";
+} from "./logo";
 
 export default function TechStack() {
     //state
     const [active, setActive] = useState<number>(-1);
-    const [animation, setAnimation] = useState(active)
 
     const toggleHandler = (id: number) => () =>
         setActive((active) => (active === id ? -1 : id));
+
+    const Refresh = ({children}) => {
+        if (active) {
+            return (
+                <SectionLeft>
+                    {children}
+                </SectionLeft>
+            )
+        }
+    }
 
     //Content
     const Languages = (
@@ -58,7 +75,8 @@ export default function TechStack() {
                 </StackSubtitle>
             </StackContainer>
             <StackDescription>
-                This is a description of the techonology, how it was used and for what, with other facts.
+                Currently one of my main programming languages, second to learned, and improved in the "Full-Stack
+                Python" bootcamp from "Bedu".
             </StackDescription>
 
             <StackContainer>
@@ -69,7 +87,8 @@ export default function TechStack() {
                 <UsedTo>Site runs with</UsedTo>
             </StackContainer>
             <StackDescription>
-                This is a description of the techonology, how it was used and for what, with other facts.
+                Currently focusin on mastering this programming language, used behind Typescript to develope this
+                website.
             </StackDescription>
 
             <StackContainer>
@@ -80,7 +99,9 @@ export default function TechStack() {
                 <UsedTo>Site runs with</UsedTo>
             </StackContainer>
             <StackDescription>
-                This is a description of the techonology, how it was used and for what, with other facts.
+                Added to my stack after learned JS, personally considering it as a very useful and important tool at the
+                moment of develop
+                JS based apps to prevent issues due to the extended dynamism of JS before sending it to production.
             </StackDescription>
 
             <StackContainer>
@@ -90,12 +111,9 @@ export default function TechStack() {
                 </StackSubtitle>
             </StackContainer>
             <StackDescription>
-                This is a description of the techonology, how it was used and for what, with other
-                facts.
-                This is a description of the techonology, how it was used and for what, with other
-                facts.
-                This is a description of the techonology, how it was used and for what, with other
-                facts.
+                The first programming language i learned, trough the process helped me to understand general structure
+                and syntax of w,
+                good practices and object-oriented based logic,
             </StackDescription>
 
             <StackContainer>
@@ -376,22 +394,31 @@ export default function TechStack() {
     return (
         <Container>
             {/*PROGRAMING LANGUAGES*/}
-            <div onClick={toggleHandler(1)}  className="mb-10">
-                    <StackTitle>
-                        <LanguagesIcon/>
-                        Programing languages
-                    </StackTitle>
+            <div onClick={toggleHandler(1)} className="mb-10">
+                <FiTitle>
+                    <Refresh>
+                        <StackTitle>
+                            <LanguagesIcon/>
+                            Programing languages
+                        </StackTitle>
+                    </Refresh>
+                </FiTitle>
             </div>
+
             <Section>
                 {active === 1 && Languages}
             </Section>
 
             {/*FRAMEWORKS AND TECHNOLOGIES*/}
             <div onClick={toggleHandler(2)} className="mb-10">
-                <StackTitle>
-                    <FwIcon/>
-                    Frameworks and Technologies
-                </StackTitle>
+                <SeTitle>
+                    <Refresh>
+                        <StackTitle>
+                            <FwIcon/>
+                            Frameworks and Technologies
+                        </StackTitle>
+                    </Refresh>
+                </SeTitle>
             </div>
             <Section>
                 {active === 2 && Frameworks}
@@ -399,10 +426,14 @@ export default function TechStack() {
 
             {/*DATABASES*/}
             <div onClick={toggleHandler(3)} className="mb-10">
-                <StackTitle>
-                    <DbIcon/>
-                    DataBases
-                </StackTitle>
+                <ThTitle>
+                    <Refresh>
+                        <StackTitle>
+                            <DbIcon/>
+                            DataBases
+                        </StackTitle>
+                    </Refresh>
+                </ThTitle>
             </div>
             <Section>
                 {active === 3 && DataBases}
@@ -410,10 +441,14 @@ export default function TechStack() {
 
             {/*VERSION SISTEM CONTROL*/}
             <div onClick={toggleHandler(4)} className="mb-10">
-                <StackTitle>
-                    <VscIcon/>
-                    Version Sistem Control
-                </StackTitle>
+                <FoTitle>
+                    <Refresh>
+                        <StackTitle>
+                            <VscIcon/>
+                            Version Sistem Control
+                        </StackTitle>
+                    </Refresh>
+                </FoTitle>
             </div>
             <Section>
                 {active === 4 && Vsc}
@@ -421,10 +456,14 @@ export default function TechStack() {
 
             {/*IDE's*/}
             <div onClick={toggleHandler(5)} className="mb-10">
-                <StackTitle>
-                    <IdeIcon/>
-                    IDE's
-                </StackTitle>
+                <FifTitle>
+                    <Refresh>
+                        <StackTitle>
+                            <IdeIcon/>
+                            IDE's
+                        </StackTitle>
+                    </Refresh>
+                </FifTitle>
             </div>
             <Section>
                 {active === 5 && Ides}
@@ -432,10 +471,14 @@ export default function TechStack() {
 
             {/*OS*/}
             <div onClick={toggleHandler(6)} className="mb-10">
-                <StackTitle>
-                    <OsIcon/>
-                    Operative Sistems
-                </StackTitle>
+                <SiTitle>
+                    <Refresh>
+                        <StackTitle>
+                            <OsIcon/>
+                            Operative Sistems
+                        </StackTitle>
+                    </Refresh>
+                </SiTitle>
             </div>
             <Section>
                 {active === 6 && Os}
@@ -446,7 +489,13 @@ export default function TechStack() {
 }
 
 //Containers
-const StackTitle = ({children, ...props}) => {
+const StackTitle = (
+    {
+        children,
+        ...
+            props
+    }
+) => {
     return (
         <Section>
             <Heading
@@ -456,7 +505,11 @@ const StackTitle = ({children, ...props}) => {
         </Section>
     )
 }
-const StackContainer = ({children}) => {
+const StackContainer = (
+    {
+        children
+    }
+) => {
     return (
         <div className="flex items-center my-3 pl-5 text-white text-2xl select-none">
             <StackArrow/>
@@ -464,14 +517,22 @@ const StackContainer = ({children}) => {
         </div>
     )
 }
-const StackSubtitle = ({children}) => {
+const StackSubtitle = (
+    {
+        children
+    }
+) => {
     return (
         <div className="ml-3 text-yellow-500 animate-pulse select-none">
             {children}
         </div>
     )
 }
-const StackSubcontainer = ({children}) => {
+const StackSubcontainer = (
+    {
+        children
+    }
+) => {
     return (
         <div className="flex items-center ml-16 my-3 pl-2 text-white text-2xl select-none">
             <StackArrow/>
@@ -479,7 +540,13 @@ const StackSubcontainer = ({children}) => {
         </div>
     )
 }
-const StackDescription = ({children, ...props}) => {
+const StackDescription = (
+    {
+        children,
+        ...
+            props
+    }
+) => {
     return (
         <SectionRight>
             <div className="ml-16 max-w-2xl text-gray-200 text-xl  text-justify select-none"
@@ -490,7 +557,11 @@ const StackDescription = ({children, ...props}) => {
         </SectionRight>
     )
 }
-const StackSubDescription = ({children}) => {
+const StackSubDescription = (
+    {
+        children
+    }
+) => {
     return (
         <SectionRight>
             <div className="ml-6 pr-3 max-w-2xl text-gray-200 text-xl text-justify select-none
@@ -501,7 +572,11 @@ const StackSubDescription = ({children}) => {
         </SectionRight>
     )
 }
-const UsedTo = ({children}) => {
+const UsedTo = (
+    {
+        children
+    }
+) => {
     return (
         <div className="ml-6 px-1 flex items-center border border-yellow-300 text-white rounded-r-lg bg-gradient-to-r
         from-green-500 via-purple-500 to-yellow-500 animate-pulse cursor-help

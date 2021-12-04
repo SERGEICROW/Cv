@@ -5,13 +5,13 @@ import Timeline from "./timeline";
 const Bio = () => {
     return (
         <Container className="max-w-2xl min-h m-5">
-            <div className="mt-11 flex flex-wrap justify-evenly items-center ">
+            <div className="mt-11 flex flex-wrap justify-evenly items-center backdrop-blur rounded-lg">
                 <div>
                     <Heading className="min-w-min min-h-min flex justify-center
-                    items-center  text-4xl text-white ">
+                    items-center  text-4xl text-white select-none">
                         Rodrigo I. Yanez Carvajal
                     </Heading>
-                    <p className="pl-5 text-green-400 text-3xl ">
+                    <p className="pl-5 text-green-400 text-3xl animate-pulse select-none">
                         <LogoArrow/>
                         Full Stack developer
                     </p>
@@ -25,13 +25,13 @@ const Bio = () => {
                 </div>
             </div>
 
-            <div className="mt-5 flex flex-col flex-wrap ">
+            <div className="mt-5 flex flex-col flex-wrap  backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="text-white text-3xl text-green-500">
+                    <Heading className="text-white text-3xl text-green-500 select-none">
                         About me
                     </Heading>
                 </div>
-                <p className="pl-10 text-white text-justify text-xl">
+                <p className="pl-10 text-white text-justify text-xl select-none">
                     <LogoArrow/>
                     Born in 1993 in Mexico City, I am a dedicated, organized and methodical individual.
                     With good interpersonal skills, am an excellent team worker, keen and very willing to
@@ -40,13 +40,13 @@ const Bio = () => {
                 </p>
             </div>
 
-            <div className="mt-5 flex flex-col flex-wrap mb-5">
+            <div className="mt-5 flex flex-col flex-wrap mb-5 backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="text-white text-3xl text-green-500">
+                    <Heading className="text-white text-3xl text-green-500 select-none">
                         Timeline
                     </Heading>
                 </div>
-                <p className="pl-10 text-white text-xl text-justify mb-5">
+                <p className="pl-10 text-white text-xl text-justify mb-5 select-none">
                     <LogoArrow/>
                     'A brief record of my past knowledge and work experience<br/>
                     CLick on timeline to watch content:

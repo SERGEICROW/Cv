@@ -25,7 +25,6 @@ export default function Timeline() {
 
     return (
 
-
         <Container className="flex flex-col flex-shrink text-white font-bold mt-5 backdrop-blur-sm">
 
             <Section>

@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Navbar from "../navbar"
 import BackgroundVideo from "../backgroundVideo";
 import Footer from "../footer";
+import {background} from "@chakra-ui/react";
 
 
 // import Footer from '../footer'
-
 
 
 const Main = ({children, router}) => {

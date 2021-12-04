@@ -24,8 +24,8 @@ const LinkItem = ({href, children, ...props}) => {
     return (
         <NextLink href={href} passHref>
             <div
-                className={active ? "border border-green-400 text-green-400 px-2 py-2 rounded-md text-xl font-medium cursor-pointer" :
-                    "text-gray-300 hover:text-green-400 px-2 py-2 rounded-md text-xl font-medium cursor-pointer border border-transparent"}
+                className={active ? "border border-green-400 text-green-400 px-2 py-2 rounded-md text-3xl font-medium cursor-pointer select-none" :
+                    "text-gray-300 hover:text-green-400 px-2 py-2 rounded-md text-3xl font-medium cursor-pointer border border-transparent select-none"}
                 {...props}
             >
                 {children}
@@ -40,7 +40,7 @@ const LinkLogo = ({href, children, ...props}) => {
     return (
         <NextLink href={href} passHref>
             <div
-                className={active ? "text-white text-2xl animate-bounce h-6 cursor-pointer" : "text-white text-2xl cursor-pointer "}
+                className={active ? "text-white text-3xl animate-bounce h-6 cursor-pointer" : " text-3xl cursor-pointer "}
                 {...props}
             >
                 {children}
@@ -80,7 +80,6 @@ const Navbar = props => {
                                 <div className="flex-shrink-0 flex items-center">
                                     <LinkLogo href="/" path={path}>
                                         <Logo/>
-                                        {/*<h3>Roy's CV</h3>*/}
                                     </LinkLogo>
                                 </div>
 

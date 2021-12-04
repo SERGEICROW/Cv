@@ -1,13 +1,12 @@
-import 'tailwindcss/tailwind.css'
-import Main from '../components/layouts/main'
+import 'tailwindcss/tailwind.css';
+import Main from '../components/layouts/main';
+import './global.css';
 
 function MyApp({Component, pageProps}) {
     return (
-        <div>
             <Main>
                 <Component {...pageProps} />
             </Main>
-        </div>
     )
 }
 
