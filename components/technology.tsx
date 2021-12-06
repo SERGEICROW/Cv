@@ -415,7 +415,7 @@ export default function TechStack() {
                     <Refresh>
                         <StackTitle>
                             <FwIcon/>
-                            Frameworks and Technologies
+                            Frameworks, API's & Tech's
                         </StackTitle>
                     </Refresh>
                 </SeTitle>

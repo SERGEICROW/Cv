@@ -55,7 +55,7 @@ export const SectionLeft = ({children, delay = 0}) => (
         initial={{y: 100, x: 100, opacity: -1}}
         animate={{y: 0, x: 0, opacity: 1}}
         // @ts-ignore
-        transition={{duration: 0, delay}}
+        transition={{duration: 0.3, delay}}
     >
         {children}
     </StyledDiv>
