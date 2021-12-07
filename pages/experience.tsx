@@ -26,10 +26,10 @@ const Experience = () => (
                     <WorkGridItems id="finde" title="Finde" image={Finde}>
                         An e-commerce web application connected to an API from Google maps with geolocalization functions.
                     </WorkGridItems>
-                    <WorkGridItems id="finde" title="Snap Grid" image={App}>
+                    <WorkGridItems id="404" title="Snap Grid" image={App}>
                         An Android app to organize information, set custom forms and upload to private cloud.
                     </WorkGridItems>
-                    <WorkGridItems id="finde" title="AI Recon" image={Ai}>
+                    <WorkGridItems id="404" title="AI Recon" image={Ai}>
                         Machine learning program to detect patterns on pictures and video.
                     </WorkGridItems>
                 </div>

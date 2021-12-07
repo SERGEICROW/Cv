@@ -19,15 +19,15 @@ export const Title = ({children}) => (
 )
 
 export const Description = ({children}) => (
-    <p className="text-white text-2xl text-center my-3">
+    <p className="text-white text-2xl text-justify my-3">
         {children}
     </p>
 )
 
 export const Details = ({children}) => (
     <SectionRight>
-        <div className="flex items-center my-3 mr-7 px-2 text-xl w-16 text-white border border-yellow-300 rounded-md
-    bg-gradient-to-r from-green-500 via-purple-500 to-yellow-500 cursor-help">
+        <div className="flex items-center justify-center pt-1 my-3 mr-8 px-1 text-xl font-mono h-6 w-20 text-white
+        border border-yellow-300 rounded-md bg-gradient-to-r from-green-500 via-purple-500 to-yellow-500 cursor-help">
             {children}
         </div>
     </SectionRight>
@@ -43,7 +43,7 @@ export const WorkImage = ({src, alt}) => (
 
 export const GithubImage = () => (
     <Image
-        className="rounded-3xl w-12 mx-1 cursor-pointer
+        className="rounded-3xl w-12 cursor-pointer
         transition duration-500 ease-in-out hover:transform hover:-translate-y-1 hover:scale-110"
         src={'/images/projectImages/github.png'}
         alt={'github'}

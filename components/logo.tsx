@@ -27,8 +27,26 @@ const Logo = () => {
         </LogoBox>
     )
 }
-
 export default Logo
+
+export const SuperLogo = () => {
+    const err = `/404_1.gif`
+    return (
+        <div className="sm:relative ml-96 hover:animate-spin">
+            <img src={err} alt="error not found"/>
+        </div>
+    )
+}
+export const SuperLogo3 = () => {
+    const err = `/404_3.gif`
+    return (
+        <div className="sm:pr-60">
+            <img src={err} alt="error not found"/>
+        </div>
+    )
+}
+
+
 
 export const LogoArrow = () => {
     const arrow = '/arrow.svg'

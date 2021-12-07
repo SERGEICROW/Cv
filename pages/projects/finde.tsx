@@ -5,12 +5,12 @@ import {
     CssIcon,
     DjangoIcon,
     GitIcon,
-    HtmlIcon,
+    HtmlIcon, JsIcon,
     JsonIcon,
     NextIcon,
     ProjectArrow,
     PyIcon, PythonIcon,
-    RestIcon
+    RestIcon, SqliteIcon
 } from "../../components/logo";
 import React from "react";
 
@@ -30,7 +30,7 @@ const Work = () => (
 
             <Container className="flex backdrop-blur ml-2">
                 <SectionRight>
-                    <div className="w-36 pl-4 mt-2 hidden sm:block">
+                    <div className="w-20 pl-4 mt-2 hidden sm:block">
                         <ProjectArrow/>
                     </div>
                 </SectionRight>
@@ -57,11 +57,12 @@ const Work = () => (
                         </Details></FiTitle>
                         <FiTitle delay={0.6}><DjangoIcon/></FiTitle>
                         <FiTitle delay={0.7}><PythonIcon/></FiTitle>
-                        <FiTitle delay={0.8}><RestIcon/></FiTitle>
-                        <FiTitle delay={0.9}><JsonIcon/></FiTitle>
-                        <FiTitle delay={1}><HtmlIcon/></FiTitle>
-                        <FiTitle delay={1.1}><CssIcon/></FiTitle>
-                        <FiTitle delay={1.2}><PyIcon/></FiTitle>
+                        <FiTitle delay={0.8}><SqliteIcon/></FiTitle>
+                        <FiTitle delay={0.9}><RestIcon/></FiTitle>
+                        <FiTitle delay={1}><JsonIcon/></FiTitle>
+                        <FiTitle delay={1.1}><JsIcon/></FiTitle>
+                        <FiTitle delay={1.2}><HtmlIcon/></FiTitle>
+                        <FiTitle delay={1.3}><CssIcon/></FiTitle>
                     </div>
 
                     <FiTitle delay={0.9}>
@@ -79,8 +80,19 @@ const Work = () => (
 
                     <br/>
                     <Section delay={1.2}>
+                        <Description>
+                            The map is called by a Google Maps Api, the DB send address data to geolocalization Api
+                            and return coordinates which Back-end deploys on the map in function of the search.
+                        </Description>
                         <WorkImage src='/images/projectImages/finde/finde.png' alt="Finde"/>
+                        <Description>
+                            Users can upload products based on 'name, price, description & picture' and manage it from
+                            user settings.
+                        </Description>
                         <WorkImage src='/images/projectImages/finde/products.png' alt="Finde"/>
+                        <Description>
+                            Users can watch add or delete data from user settings.
+                        </Description>
                         <WorkImage src='/images/projectImages/finde/data.png' alt="Finde"/>
                     </Section>
                     <SectionLeft><Title>
