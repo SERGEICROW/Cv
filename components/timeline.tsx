@@ -22,11 +22,12 @@ export default function Timeline() {
             )
         }
     }
+   
 
     return (
 
         <Container
-            className="flex flex-col flex-shrink text-white font-bold mt-5 backdrop-blur-sm">
+            className="flex flex-col flex-shrink text-white  mt-5 backdrop-blur-sm">
             <Section>
                 <div className="grid grid-rows-4 border-1-2 my-3">
                     <JetBrains onClick={() => setContent(BarContent_3)}/>
@@ -41,7 +42,7 @@ export default function Timeline() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-10">
+                <div className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
                     {sep.map((i) => {
                         return (
                             <div className="flex items-center justify-center">
@@ -52,10 +53,15 @@ export default function Timeline() {
 
                 </div>
                 <hr className="relative bottom-1"/>
-                <div className="flex justify-around mb-5">
+                <div className="flex justify-around mb-5 font-bold ">
                     {years2.map((i) => {
                         return (
-                            <div className="animate-pulse">{i}</div>
+                            <div className="animate-pulse block sm:hidden ">{i}</div>
+                        );
+                    })}
+                    {years1.map((i) => {
+                        return (
+                            <div className="animate-pulse hidden sm:block ">{i}</div>
                         );
                     })}
                 </div>
@@ -147,31 +153,35 @@ const BarContent_3 = () => {
                 <FiTitle><Heading className="text-gray-400 text-2xl my-px">
                     2020 - Present
                 </Heading></FiTitle>
-                <SeTitle><Heading
-                    className="text-4xl bg-gradient-to-r from-black via-purple-800 to-pink-700 my-px subpixel-antialiased">
-                    Jetbrains Academy
-                </Heading></SeTitle>
+                <SeTitle>
+                    <Heading
+                        className="text-4xl bg-gradient-to-r from-purple-800 via-pink-700 to-transparent my-px subpixel-antialiased font-light">
+                        Jetbrains
+                        <Heading className="font-bold text-4xl pl-8">Academy</Heading>
+                    </Heading>
+
+                </SeTitle>
                 <ThTitle>
                     <div className="flex my-px subpixel-antialiased animate-pulse">
                         <Heading
-                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500">
+                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
                             KOTLIN
                         </Heading>
                         _
                         <Heading
-                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400">
+                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
                             PYTHON
                         </Heading>
                         _
                         <Heading
-                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400">
+                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
                             JS
                         </Heading>
                     </div>
                 </ThTitle>
                 <FoTitle><p className="pl-10 text-white text-justify text-xl my-px">
                     <LogoArrow/>
-                    Online Courses
+                    Online Courses based on subject <br/>progress and technical questions
                 </p></FoTitle>
             </div>
             <FifTitle><Image src={'/jb.png'} width={150} height={140} alt="logo" className="animate-pulse"/></FifTitle>
@@ -210,19 +220,25 @@ const BarContent_5 = () => {
                 <FiTitle><Heading className="text-gray-500 text-2xl">
                     03/2021 - 10/2021
                 </Heading></FiTitle>
-                <SeTitle><Image src={'/bedu_white.png'} width={100} height={40} alt="logo" className="animate-pulse"/></SeTitle>
-                <ThTitle><Heading className="text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-green-400 to-blue-600">
+                <SeTitle>
+                    <div className="animate-pulse bg-gradient-to-r from-yellow-800 via-yellow-600 to-transparent">
+                        <Image src={'/bedu_white.png'} width={110} height={50} alt="logo"/>
+                    </div>
+                </SeTitle>
+                <ThTitle><Heading
+                    className="text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-green-400 to-blue-600">
                     Python Full Stack Bootcamp
                 </Heading></ThTitle>
                 <FoTitle><p className="pl-10 text-white text-justify text-xl">
                     <LogoArrow/>
-                    7 Month bootcamp
+                    7 Month web <br/>development bootcamp
                 </p></FoTitle>
             </div>
             <FifTitle>
                 <Image src={'/bedu_insight.png'} width={150} height={140} alt="logo" className="animate-pulse"/>
                 <SiTitle>
                     <Image src={'/credly.png'} width={80} height={30} alt="logo" className="animate-pulse"/>
+                    <Heading className="text-white animate-pulse font-light">Badge</Heading>
                 </SiTitle>
             </FifTitle>
 

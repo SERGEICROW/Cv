@@ -6,12 +6,11 @@ import {useRouter} from "next/router";
 import Logo from "./logo";
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    {name: 'Dashboard', href: '#', current: true},
+    {name: 'Team', href: '#', current: false},
+    {name: 'Projects', href: '#', current: false},
+    {name: 'Calendar', href: '#', current: false},
 ]
-
 
 
 function classNames(...classes) {
@@ -130,9 +129,9 @@ const Navbar = props => {
                                             py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                             <Menu.Item>
 
-                                                    <a href="#" >
-                                                        Settings
-                                                    </a>
+                                                <a href="#">
+                                                    Settings
+                                                </a>
 
                                             </Menu.Item>
                                         </Menu.Items>

@@ -46,6 +46,15 @@ export const StackArrow = () => {
         </ArrowBox>
     )
 }
+export const ProjectArrow = () => {
+    const arrow = '/arrow.svg'
+    return (
+        <ArrowBox className="mr-3">
+            <Image src={arrow} width={40} height={40} alt='arrow'/>
+        </ArrowBox>
+    )
+}
+
 
 export const PythonIcon = () => (<Image src={'/icons/python.png'} width={40} height={40} className="animate-pulse"/>)
 export const JsIcon = () => (<Image src={'/icons/js.png'} width={40} height={40} className="animate-pulse"/>)
@@ -77,6 +86,11 @@ export const WebsIcon = () => (<Image src={'/icons/webstorm.png'} width={45} hei
 export const JsonIcon = () => (<Image src={'/icons/json.png'} width={40} height={40} className="animate-pulse"/>)
 export const XmlIcon = () => (<Image src={'/icons/xml.png'} width={40} height={40} className="animate-pulse"/>)
 
+export const BackArrow = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
+    </svg>
+)
 
 export const IdeIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9 mr-5" fill="none" viewBox="0 0 24 24"
@@ -130,5 +144,12 @@ export const FrontIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+    </svg>
+)
+
+export const ProjectsIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
     </svg>
 )

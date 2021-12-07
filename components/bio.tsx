@@ -4,14 +4,14 @@ import Timeline from "./timeline";
 
 const Bio = () => {
     return (
-        <Container className="max-w-2xl min-h m-5">
+        <Container className="max-w-2xl min-h m-5 select-none">
             <div className="mt-11 flex flex-wrap justify-evenly items-center backdrop-blur rounded-lg">
                 <div>
                     <Heading className="min-w-min min-h-min flex justify-center
                     items-center  text-4xl text-white select-none">
                         Rodrigo I. Yanez Carvajal
                     </Heading>
-                    <p className="pl-5 text-green-400 text-3xl animate-pulse select-none">
+                    <p className="pl-5 text-green-400 text-2xl animate-pulse select-none font-mono font-bold">
                         <LogoArrow/>
                         Full Stack developer
                     </p>
@@ -27,7 +27,7 @@ const Bio = () => {
 
             <div className="mt-5 flex flex-col flex-wrap  backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="text-white text-3xl text-green-500 select-none">
+                    <Heading className="text-white text-3xl text-green-500 select-none font-mono">
                         About me
                     </Heading>
                 </div>
@@ -42,11 +42,11 @@ const Bio = () => {
 
             <div className="mt-5 flex flex-col flex-wrap mb-5 backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="text-white text-3xl text-green-500 select-none">
+                    <Heading className="text-white text-3xl text-green-500 select-none font-mono">
                         Timeline
                     </Heading>
                 </div>
-                <p className="pl-10 text-white text-xl text-justify mb-5 select-none">
+                <p className="pl-10 text-white text-xl text-justify mb-5 select-none ">
                     <LogoArrow/>
                     'A brief record of my past knowledge and work experience<br/>
                     CLick on timeline to watch content:

@@ -489,13 +489,7 @@ export default function TechStack() {
 }
 
 //Containers
-const StackTitle = (
-    {
-        children,
-        ...
-            props
-    }
-) => {
+const StackTitle = ({children, ...props}) => {
     return (
         <Section>
             <Heading
@@ -505,11 +499,7 @@ const StackTitle = (
         </Section>
     )
 }
-const StackContainer = (
-    {
-        children
-    }
-) => {
+const StackContainer = ({children}) => {
     return (
         <div className="flex items-center my-3 pl-5 text-white text-2xl select-none">
             <StackArrow/>
@@ -517,22 +507,14 @@ const StackContainer = (
         </div>
     )
 }
-const StackSubtitle = (
-    {
-        children
-    }
-) => {
+const StackSubtitle = ({children}) => {
     return (
         <div className="ml-3 text-yellow-500 animate-pulse select-none">
             {children}
         </div>
     )
 }
-const StackSubcontainer = (
-    {
-        children
-    }
-) => {
+const StackSubcontainer = ({children}) => {
     return (
         <div className="flex items-center ml-16 my-3 pl-2 text-white text-2xl select-none">
             <StackArrow/>
