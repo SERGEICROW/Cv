@@ -1,25 +1,20 @@
-import Head from 'next/head'
-import BackgroundVideo from "../components/backgroundVideo";
-import MainComponent from "../components/mainComponent";
-
-export default function Home() {
-    return (
-        <div className="bg-white">
-
-            <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico"/>
-            </Head>
-
-            {/*<video autoPlay loop muted className="fixed z-10 w-auto min-w-full min-h-full max-w-none">*/}
-            {/*    <source src="/videos/background-video.mp4" type="video/mp4"/>*/}
-            {/*    Your browser does not support the video tag.*/}
-            {/*</video>*/}
-            <BackgroundVideo/>
-            <MainComponent />
+import Section from "../components/section";
+import Bio from "../components/bio";
 
 
 
-        </div>
-    )
-}
+import {Container} from "@chakra-ui/react";
+import Timeline from "../components/timeline";
+
+
+const Home = () => (
+
+    <Container className="relative z-30 py-16 flex flex-col items-center justify-center
+    border border-green-500 min-h-screen">
+        <Section>
+            <Bio/>
+        </Section>
+    </Container>
+)
+
+export default Home
