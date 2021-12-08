@@ -94,10 +94,8 @@ const Work = () => (
                             Users can watch add or delete data from user settings.
                         </Description>
                         <WorkImage src='/images/projectImages/finde/data.png' alt="Finde"/>
+                        <div className="w-full flex justify-end"><Title>{''}</Title></div>
                     </Section>
-                    <SectionLeft><Title>
-
-                    </Title></SectionLeft>
 
                 </div>
             </Container>

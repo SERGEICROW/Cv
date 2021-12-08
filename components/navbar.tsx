@@ -3,13 +3,13 @@ import {Disclosure, Menu, Transition} from '@headlessui/react'
 import {AdjustmentsIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
 import NextLink from 'next/link'
 import {useRouter} from "next/router";
-import Logo from "./logo";
+import Logo, {DownloadIcon} from "./logo";
 
 const navigation = [
-    {name: 'Dashboard', href: '#', current: true},
-    {name: 'Team', href: '#', current: false},
-    {name: 'Projects', href: '#', current: false},
-    {name: 'Calendar', href: '#', current: false},
+    {name: 'About', href: '/', current: true},
+    {name: 'Stack', href: '/stack', current: false},
+    {name: 'Experience', href: '/experience', current: false},
+    {name: 'Api section', href: '/about', current: false},
 ]
 
 
@@ -105,12 +105,11 @@ const Navbar = props => {
                                 className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
                                 {/*Settings Dropdown*/}
-                                <Menu as="div" className="ml-3 relative">
+                                <Menu as="div" className="w-6 sm:w-0">
 
                                     <div>
                                         <Menu.Button type="button"
-                                                     className="p-1 rounded-full text-gray-400 hover:text-yellow-400">
-                                            <span className="sr-only">View notifications</span>
+                                                     className="p-1 rounded-full text-gray-400 hover:text-green-400">
                                             <AdjustmentsIcon className="h-8 w-8" aria-hidden="true"/>
                                         </Menu.Button>
                                     </div>
@@ -124,24 +123,22 @@ const Navbar = props => {
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95"
                                     >
-                                        <Menu.Items
-                                            className="z-30 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg
-                                            py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                            <Menu.Item>
+                                        <div className="z-30 flex justify-center items-center p-3 origin-top-right absolute right-0 mt-2 rounded-md
+                                            bg-black text-white text-2xl border border-green-400 hover:text-yellow-400">
 
-                                                <a href="#">
-                                                    Settings
+                                                <a href="#" className="mr-3 text-base sm:text-3xl">
+                                                    Download CV
                                                 </a>
+                                                <DownloadIcon/>
 
-                                            </Menu.Item>
-                                        </Menu.Items>
+                                        </div>
+
+
                                     </Transition>
-
                                 </Menu>
 
                             </div>
                         </div>
-
                     </div>
 
                     {/*PhoneDropMenu*/}
@@ -152,13 +149,12 @@ const Navbar = props => {
                                     key={item.name}
                                     as="a"
                                     href={item.href}
-                                    className={classNames(
-                                        item.current ? 'border border-green-400 text-green-400' : 'text-gray-300 hover:text-green-400',
-                                        'block px-3 py-2 rounded-md text-base font-medium'
-                                    )}
-                                    aria-current={item.current ? 'page' : undefined}
                                 >
+                                    <div className="bg-black">
+                                    <LinkItem href={item.href} path={path}>
                                     {item.name}
+                                    </LinkItem>
+                                    </div>
                                 </Disclosure.Button>
                             ))}
                         </div>

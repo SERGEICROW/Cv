@@ -1,4 +1,4 @@
-import {Container, Heading, Image} from "@chakra-ui/react";
+import {Container, Heading, Image, Link} from "@chakra-ui/react";
 import {useState} from "react";
 import {LogoArrow} from "./logo";
 import Section, {FifTitle, FiTitle, FoTitle, SeTitle, SiTitle, ThTitle} from "./section";
@@ -238,7 +238,7 @@ const BarContent_5 = () => {
                 <Image src={'/bedu_insight.png'} width={150} height={140} alt="logo" className="animate-pulse"/>
                 <SiTitle>
                     <Image src={'/credly.png'} width={80} height={30} alt="logo" className="animate-pulse"/>
-                    <Heading className="text-white animate-pulse font-light">Badge</Heading>
+                    <a href={`https://${"credly.com/users/rodrigo-yanez.b981911e"}`} className="text-white underline hover:text-blue-500">Badge url</a>
                 </SiTitle>
             </FifTitle>
 

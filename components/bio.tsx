@@ -33,10 +33,10 @@ const Bio = () => {
                 </div>
                 <p className="pl-10 text-white text-justify text-xl select-none">
                     <LogoArrow/>
-                    Born in 1993 in Mexico City, I am a dedicated, organized and methodical individual.
-                    With good interpersonal skills, am an excellent team worker, keen and very willing to
+                    Born in 1993 in Mexico City, I am a very motivated, dedicated and methodical individual
+                    with good technical and soft skills, am an excellent team worker, keen and very willing to
                     learn and develop new skills. With an active and dynamic approach to work to identify
-                    and develop opportunities.
+                    and develop opportunities and solutions, generating a healthy and productive work environment.
                 </p>
             </div>
 
@@ -48,7 +48,7 @@ const Bio = () => {
                 </div>
                 <p className="pl-10 text-white text-xl text-justify mb-5 select-none ">
                     <LogoArrow/>
-                    'A brief record of my past knowledge and work experience<br/>
+                    'A brief and genera record of my past knowledge and work experience<br/>
                     CLick on timeline to watch content:
                 </p>
             </div>
