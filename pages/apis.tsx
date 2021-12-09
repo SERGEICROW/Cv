@@ -1,5 +1,7 @@
 
-
+export default function Apis() {
+    return <h6 className="text-red-700 p-20">IN DEVELOPMENT</h6>
+}
 
 
 
