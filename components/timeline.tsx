@@ -1,9 +1,10 @@
 import {Container, Heading, Image, Link} from "@chakra-ui/react";
-import {useState} from "react";
+import {useState, useRef} from "react";
 import {LogoArrow} from "./logo";
 import Section, {FifTitle, FiTitle, FoTitle, SeTitle, SiTitle, ThTitle} from "./section";
 
 import {Bootcamp, Broker, Engineer, Finances, JetBrains, Pambolitos} from "./css";
+import {smooth} from "popmotion";
 
 export default function Timeline() {
 
@@ -14,23 +15,27 @@ export default function Timeline() {
 
     const Refresh = ({children}) => {
         const active = content != setContent
+
         if (active) {
+
             return (
                 <Section>
-                    {children}
+                    <div>
+                        {children}
+                    </div>
                 </Section>
             )
         }
     }
-   
 
     return (
 
         <Container
             className="flex flex-col flex-shrink text-white  mt-5 backdrop-blur-sm">
             <Section>
+
                 <div className="grid grid-rows-4 border-1-2 my-3">
-                    <JetBrains onClick={() => setContent(BarContent_3)}/>
+                        <JetBrains onClick={() => setContent(BarContent_3)}/>
                     <div className="flex">
                         <Broker onClick={() => setContent(BarContent_1)}/>
                         <Bootcamp onClick={() => setContent(BarContent_5)}/>
@@ -42,7 +47,8 @@ export default function Timeline() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
+                <div
+                    className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
                     {sep.map((i) => {
                         return (
                             <div className="flex items-center justify-center">
@@ -238,7 +244,8 @@ const BarContent_5 = () => {
                 <Image src={'/bedu_insight.png'} width={150} height={140} alt="logo" className="animate-pulse"/>
                 <SiTitle>
                     <Image src={'/credly.png'} width={80} height={30} alt="logo" className="animate-pulse"/>
-                    <a href={`https://${"credly.com/users/rodrigo-yanez.b981911e"}`} className="text-white underline hover:text-blue-500">Badge url</a>
+                    <a href={`https://${"credly.com/users/rodrigo-yanez.b981911e"}`}
+                       className="text-white underline hover:text-blue-500">Badge url</a>
                 </SiTitle>
             </FifTitle>
 
