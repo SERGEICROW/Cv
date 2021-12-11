@@ -19,13 +19,13 @@ const Bio = () => {
                 <div>
                     <img
                         className="w-36 border-double rounded-full border border-primary border-8 border-opacity-30"
-                        src="/images/profile_pic.png"
+                        src={"/images/profile_pic.png"}
                         alt="Profile image"
                     />
                 </div>
             </div>
 
-            <div className="mt-5 flex flex-col flex-wrap  backdrop-blur rounded-lg">
+            <div className="mt-5 flex flex-col flex-wrap backdrop-blur rounded-lg">
                 <div>
                     <Heading className="text-white text-3xl text-green-500 select-none font-mono">
                         About me

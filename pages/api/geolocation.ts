@@ -7,16 +7,16 @@ const client = new Twitter({
     access_token_secret: process.env.TWITTER_ACCESS_SECRET,
 })
 
-//TRENDING TOPICS
-export default async function trending(req, res) {
+//WOEID LOCATION (lat/long)
+export default async function nearMe(req, res) {
     try {
-        const id = req.query.woeid;
-        const trends = await client.get('trends/place.json', {
-            id,
+        const {lat, long} = req.query
+        const response = await client.get('/trends/closest.json', {
+            lat,
+            long,
         })
-        res.send(trends)
+        res.send(response)
     } catch (error) {
         console.log(error.message)
     }
 }
-
