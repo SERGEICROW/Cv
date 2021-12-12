@@ -4,7 +4,7 @@ import Bio from "../components/bio";
 
 
 import {Container} from "@chakra-ui/react";
-import Timeline from "../components/timeline";
+
 
 
 const Home = () => (

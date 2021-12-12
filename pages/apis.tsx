@@ -1,27 +1,14 @@
 import {Container} from "@chakra-ui/react";
+import TwitterApp from "../components/twitterTrends";
 
 
+const Apis = () => (
 
-export default function Api({data}) {
-    const {results = []} = data;
-    return (
+    <Container className="relative z-30 py-16 flex flex-col items-center justify-center
+    border border-green-500 min-h-screen select-none">
+        <TwitterApp/>
+    </Container>
 
+)
 
-        <Container className="relative z-30 py-16 border border-green-500 min-h-screen w- text-white flex flex-col justify-center items-center">
-
-            <ul className="grid-cols-3">
-                {results.map(result => {
-                    const {id, name, image} = result;
-                    return (
-                        <li key={id}>
-                            <img src={image} alt="hola"/>
-                            <h3>{name}</h3>
-                        </li>
-                    )
-                })}
-            </ul>
-        </Container>
-
-
-    )
-}
+export default Apis
