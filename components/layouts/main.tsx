@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Navbar from "../navbar"
 import BackgroundVideo from "../backgroundVideo";
 import Footer from "../footer";
-import {background} from "@chakra-ui/react";
 
 
 // import Footer from '../footer'
@@ -13,7 +12,7 @@ const Main = ({children, router}) => {
         <div>
             <Head>
                 <title>Rodrigo's - Homepage</title>
-                <link rel="icon" href="/cv.jpg"/>
+                <link rel="icon" href={"/cv.jpg"}/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="description" content="Rodrigo's homepage"/>
                 <meta name="author" content="Rodrigo Yanez"/>
