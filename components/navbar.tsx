@@ -3,7 +3,9 @@ import {Disclosure, Menu, Transition} from '@headlessui/react'
 import {AdjustmentsIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
 import NextLink from 'next/link'
 import {useRouter} from "next/router";
-import Logo, {DownloadIcon} from "./logo";
+import {BiCloudDownload} from "react-icons/bi";
+import {BsPhoneVibrate} from "react-icons/bs";
+import Logo from "./logo";
 
 const navigation = [
     {name: 'About', href: '/', current: true},
@@ -123,15 +125,24 @@ const Navbar = props => {
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95"
                                     >
-                                        <div className="z-30 flex justify-center items-center p-3 origin-top-right absolute right-0 mt-2 rounded-md
-                                            bg-black text-white text-2xl border border-green-400 hover:text-yellow-400">
+                                        <Menu.Items className="z-30 flex flex-col p-3 origin-top-right absolute right-0 mt-2 rounded-md
+                                            bg-black text-white text-2xl border border-green-400">
 
-                                                <a href="#" className="mr-3 text-base sm:text-3xl">
-                                                    Download CV
-                                                </a>
-                                                <DownloadIcon/>
+                                            <Menu.Item>
+                                                <button className="flex items-center w-max text-base sm:text-3xl hover:text-yellow-400 hover:animate-pulse mb-3">
+                                                    -Download CV
+                                                    <BiCloudDownload className={"hidden sm:block ml-3 text-4xl text-yellow-400"}/>
+                                                </button>
+                                            </Menu.Item>
+                                            <Menu.Item>
+                                                <button className="flex items-center w-max text-base sm:text-3xl hover:text-yellow-400 hover:animate-pulse">
+                                                    -Contact Roy
+                                                    <BsPhoneVibrate className={"hidden sm:block ml-8 text-4xl text-yellow-400"}/>
+                                                </button>
+                                            </Menu.Item>
 
-                                        </div>
+
+                                        </Menu.Items>
 
 
                                     </Transition>
@@ -151,9 +162,9 @@ const Navbar = props => {
                                     href={item.href}
                                 >
                                     <div className="bg-black">
-                                    <LinkItem href={item.href} path={path}>
-                                    {item.name}
-                                    </LinkItem>
+                                        <LinkItem href={item.href} path={path}>
+                                            {item.name}
+                                        </LinkItem>
                                     </div>
                                 </Disclosure.Button>
                             ))}
