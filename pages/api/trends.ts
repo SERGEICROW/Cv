@@ -17,6 +17,7 @@ export default async function trending(req, res) {
         res.send(trends)
     } catch (error) {
         console.log(error.message)
+        res.status(200).json({name: 'not working'})
     }
 }
 

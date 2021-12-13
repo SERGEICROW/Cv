@@ -119,7 +119,7 @@ export default function TwitterApp() {
                         <FiMapPin className={"ml-3 text-3xl text-white hover:text-yellow-400 cursor-pointer"} onClick={handleLocation}/>
                     </div>
                 </Section>
-            </div>
+            </div>]
 
             <Section delay={1.5}>{listTrends()}
 
