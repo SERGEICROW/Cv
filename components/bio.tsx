@@ -7,11 +7,11 @@ const Bio = () => {
         <Container className="max-w-2xl min-h m-5 select-none">
             <div className="mt-11 flex flex-wrap justify-evenly items-center backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="min-w-min min-h-min flex justify-center
-                    items-center  text-4xl text-white select-none">
+                    <Heading className="text-3xl sm:text-4xl min-w-min min-h-min flex justify-center
+                    items-center text-white select-none">
                         Rodrigo I. Yanez Carvajal
                     </Heading>
-                    <p className="pl-5 text-green-400 text-2xl animate-pulse select-none font-mono font-bold">
+                    <p className="text-xl sm:text-2xl pl-5 text-green-400 animate-pulse select-none font-mono font-bold">
                         <LogoArrow/>
                         Full Stack developer
                     </p>
@@ -27,11 +27,11 @@ const Bio = () => {
 
             <div className="mt-5 flex flex-col flex-wrap backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="text-white text-3xl text-green-500 select-none font-mono">
+                    <Heading className="text-2xl sm:text-3xl text-white text-green-500 select-none font-mono">
                         About me
                     </Heading>
                 </div>
-                <p className="pl-10 text-white text-justify text-xl select-none">
+                <p className="pl-10 text-white text-justify sm:text-xl select-none">
                     <LogoArrow/>
                     Born in 1993 in Mexico City, I am a very motivated, dedicated and methodical individual
                     with good technical and soft skills, am an excellent team worker, keen and very willing to
@@ -42,14 +42,14 @@ const Bio = () => {
 
             <div className="mt-5 flex flex-col flex-wrap mb-5 backdrop-blur rounded-lg">
                 <div>
-                    <Heading className="text-white text-3xl text-green-500 select-none font-mono">
+                    <Heading className="text-2xl sm:text-3xl text-white text-green-500 select-none font-mono">
                         Timeline
                     </Heading>
                 </div>
-                <p className="pl-10 text-white text-xl text-justify mb-5 select-none ">
+                <p className="pl-10 text-white sm:text-xl text-justify mb-5 select-none ">
                     <LogoArrow/>
-                    'A brief and genera record of my past knowledge and work experience<br/>
-                    CLick on timeline to watch content:
+                    A brief and general record of my past knowledge and work experience.<br/>
+                    <p className={"animate-pulse mt-3 text-gray-400"}>Click on timelines to watch content:</p>
                 </p>
             </div>
                <Timeline/>

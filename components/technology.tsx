@@ -263,7 +263,7 @@ export default function TechStack() {
             <StackContainer>
                 <DebianIcon/>
                 <StackSubtitle>
-                    GNU Linux - Kali & Debian based distributions
+                    GNU Linux <span className={"hidden sm:block"}>- Kali & Debian based distributions</span>
                 </StackSubtitle>
                 <UsedTo>Used on creation</UsedTo>
             </StackContainer>
@@ -430,7 +430,7 @@ const StackSubtitle = ({children}) => {
 
 const StackSubcontainer = ({children}) => {
     return (
-        <div className="flex items-center ml-16 my-3 pl-2 text-white text-2xl select-none">
+        <div className="ml-6 sm:ml-16 my-3 pl-2 flex items-center text-white text-2xl select-none">
             <StackArrow/>
             {children}
         </div>
@@ -440,7 +440,7 @@ const StackSubcontainer = ({children}) => {
 const StackDescription = ({children, ...props}) => {
     return (
         <SectionRight>
-            <div className="ml-16 max-w-2xl text-gray-200 text-xl  text-justify select-none"
+            <div className="hidden sm:block ml-16 max-w-2xl text-gray-200 text-xl  text-justify select-none"
                  {...props}>
                 <StackArrow/>
                 {children}
@@ -452,8 +452,7 @@ const StackDescription = ({children, ...props}) => {
 const StackSubDescription = ({children}) => {
     return (
         <SectionRight>
-            <div className="ml-6 pr-3 max-w-2xl text-gray-200 text-xl text-justify select-none
-            sm:block sm:ml-32 sm:pr-16">
+            <div className="hidden sm:block ml-32 pr-16 pr-3 max-w-2xl text-gray-200 text-xl text-justify select-none ">
                 <StackArrow/>
                 {children}
             </div>

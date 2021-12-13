@@ -91,16 +91,16 @@ const BarContent_0 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-gray-400 text-2xl">
+                <Heading className="text-xl sm:text-2xl text-gray-400">
                     2013 - 2016
                 </Heading>
-                <Heading className="text-red-700 text-4xl">
+                <Heading className="text-2xl sm:text-4xl text-red-700">
                     UVM
                 </Heading>
-                <Heading className="text-2xl">
+                <Heading className="text-xl sm:text-2xl">
                     Finances and banking degree
                 </Heading>
-                <p className="pl-10 text-white text-justify text-xl text-gray-200">
+                <p className="sm:text-xl sm:pl-10 text-white text-justify text-gray-200">
                     <LogoArrow/>
                     Truncated
                 </p>
@@ -112,18 +112,18 @@ const BarContent_1 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-gray-400 text-2xl">
+                <Heading className="text-xl sm:text-2xl text-gray-400">
                     06/2015 - 04/2018
                 </Heading>
-                <Heading className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+                <Heading className="text-2xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
                     Financial Institutions
                 </Heading>
-                <Heading className="text-2xl">
+                <Heading className="text-xl sm:text-2xl">
                     Broker/Sells
                 </Heading>
-                <p className="pl-10 text-white text-justify text-xl text-gray-200">
+                <p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify text-gray-200">
                     <LogoArrow/>
-                    Financial instruments<br/> and mortgage loans sells
+                    Financial instruments and mortgage loans sells & consulting.
                 </p>
             </div>
 
@@ -134,21 +134,22 @@ const BarContent_2 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-gray-400 text-2xl">
+                <Heading className="text-xl sm:text-2xl text-gray-400">
                     2018 - 2020
                 </Heading>
                 <Heading
-                    className="text-4xl  bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-red-500">
+                    className="text-2xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-red-500">
                     Los Pambolitos
                 </Heading>
-                <Heading className="text-2xl">
+                <Heading className="text-xl sm:text-2xl">
                     Mexican Restaurant
                 </Heading>
-                <p className="pl-10 text-white text-justify text-xl">
+                <p className="sm:text-xl sm:pl-10 text-white text-justify">
                     <LogoArrow/>
                     Owner and Manager
                 </p>
             </div>
+            <Image src={'/pambolitos.png'} width={160} height={150} alt="logo" className={"rounded-md"}/>
         </div>
     )
 }
@@ -156,38 +157,38 @@ const BarContent_3 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <FiTitle><Heading className="text-gray-400 text-2xl my-px">
+                <FiTitle><Heading className="text-xl sm:text-2xl text-gray-400 my-px">
                     2020 - Present
                 </Heading></FiTitle>
                 <SeTitle>
                     <Heading
-                        className="text-4xl bg-gradient-to-r from-purple-800 via-pink-700 to-transparent my-px subpixel-antialiased font-light">
+                        className="text-2xl sm:text-4xl bg-gradient-to-r from-purple-800 via-pink-700 to-transparent my-px subpixel-antialiased font-light">
                         Jetbrains
-                        <Heading className="font-bold text-4xl pl-8">Academy</Heading>
+                        <Heading className="text-3xl sm:text-4xl font-bold pl-8">Academy</Heading>
                     </Heading>
 
                 </SeTitle>
                 <ThTitle>
                     <div className="flex my-px subpixel-antialiased animate-pulse">
                         <Heading
-                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
+                            className="sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
                             KOTLIN
                         </Heading>
                         _
                         <Heading
-                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
+                            className="sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
                             PYTHON
                         </Heading>
                         _
                         <Heading
-                            className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
+                            className="sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
                             JS
                         </Heading>
                     </div>
                 </ThTitle>
-                <FoTitle><p className="pl-10 text-white text-justify text-xl my-px">
+                <FoTitle><p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify my-px">
                     <LogoArrow/>
-                    Online Courses based on subject <br/>progress and technical questions
+                    Online Courses based on subject progress and technical questions
                 </p></FoTitle>
             </div>
             <FifTitle><Image src={'/jb.png'} width={150} height={140} alt="logo" className="animate-pulse"/></FifTitle>
@@ -198,19 +199,19 @@ const BarContent_4 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <FiTitle><Heading className="text-gray-500 text-2xl">
+                <FiTitle><Heading className="text-xl sm:text-2xl text-gray-500 ">
                     05/2020 - Present
                 </Heading></FiTitle>
                 <SeTitle><Heading
-                    className="text-4xl text-white bg-gradient-to-r from-red-900 via-red-700 to-transparent subpixel-antialiased">
+                    className="text-2xl sm:text-4xl text-white bg-gradient-to-r from-red-900 via-red-700 to-transparent subpixel-antialiased">
                     UVM
                 </Heading></SeTitle>
-                <ThTitle><Heading className="text-2xl text-yellow-400 animate-pulse">
+                <ThTitle><Heading className="text-xl sm:text-2xl text-yellow-400 animate-pulse">
                     Software and network's Engineering
                 </Heading></ThTitle>
-                <FoTitle><p className="pl-10 text-white text-justify text-xl">
+                <FoTitle><p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify">
                     <LogoArrow/>
-                    In progress, expected to be <br/>concluded by the end of 2022
+                    In progress, expected to be concluded by the end of 2022
                 </p></FoTitle>
             </div>
             <FifTitle>
@@ -223,7 +224,7 @@ const BarContent_5 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <FiTitle><Heading className="text-gray-500 text-2xl">
+                <FiTitle><Heading className="text-xl sm:text-2xl text-gray-500">
                     03/2021 - 10/2021
                 </Heading></FiTitle>
                 <SeTitle>
@@ -232,19 +233,19 @@ const BarContent_5 = () => {
                     </div>
                 </SeTitle>
                 <ThTitle><Heading
-                    className="text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-green-400 to-blue-600">
+                    className="text-xl sm:text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-green-400 to-blue-600">
                     Python Full Stack Bootcamp
                 </Heading></ThTitle>
-                <FoTitle><p className="pl-10 text-white text-justify text-xl">
+                <FoTitle><p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify">
                     <LogoArrow/>
-                    7 Month web <br/>development bootcamp
+                    7 Month web development bootcamp
                 </p></FoTitle>
             </div>
             <FifTitle>
                 <Image src={'/bedu_insight.png'} width={150} height={140} alt="logo" className="animate-pulse"/>
                 <SiTitle>
                     <Image src={'/credly.png'} width={80} height={30} alt="logo" className="animate-pulse"/>
-                    <a href={`https://${"credly.com/users/rodrigo-yanez.b981911e"}`}
+                    <a href={`https://credly.com/users/rodrigo-yanez.b981911e`}
                        className="text-white underline hover:text-blue-500">Badge url</a>
                 </SiTitle>
             </FifTitle>

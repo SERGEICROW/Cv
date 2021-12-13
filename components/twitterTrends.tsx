@@ -99,7 +99,7 @@ export default function TwitterApp() {
                 </Heading></SectionLeft>
 
                 <SectionRight>
-                    <div className={"ml-3 flex items-center"}>
+                    <div className={"ml-2 sm:ml-3.5 flex items-center"}>
                         <p className={"text-white sm:text-xl text-center backdrop-blur"}><LogoArrow/>Click on "WorldWide" to display the default country trending list
                         or click on the location icon to see trends near you! Each trend is a link to twitter respective content.</p>
                     </div>

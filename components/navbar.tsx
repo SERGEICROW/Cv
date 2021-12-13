@@ -41,7 +41,7 @@ const LinkLogo = ({href, children, ...props}) => {
     return (
         <NextLink href={href} passHref>
             <div
-                className={active ? "text-white text-3xl animate-bounce h-6 cursor-pointer" : " text-3xl cursor-pointer "}
+                className={active ? "text-green-500 text-3xl animate-bounce h-6 cursor-pointer" : "text-white text-3xl cursor-pointer "}
                 {...props}
             >
                 {children}
