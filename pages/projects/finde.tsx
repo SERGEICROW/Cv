@@ -18,7 +18,7 @@ import React from "react";
 const Work = () => (
 
     <Container className="relative z-30 py-16 flex flex-col items-center justify-center
-    border border-green-500 min-h-screen select-none">
+    border border-green-500 h-min select-none">
         <div className="mb-10 max-w-3xl m-5">
 
             <SectionLeft><Title>

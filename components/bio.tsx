@@ -4,7 +4,7 @@ import Timeline from "./timeline";
 
 const Bio = () => {
     return (
-        <Container className="max-w-2xl min-h m-5 select-none">
+        <Container className="max-w-2xl m-5 select-none">
             <div className="mt-11 flex flex-wrap justify-evenly items-center backdrop-blur rounded-lg">
                 <div>
                     <Heading className="text-3xl sm:text-4xl min-w-min min-h-min flex justify-center

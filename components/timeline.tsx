@@ -72,7 +72,7 @@ export default function Timeline() {
                     })}
                 </div>
 
-                <div className="h-52">
+                <div className="h-72 sm:h-52">
 
                     <div className="mx-7">
                         <Refresh>

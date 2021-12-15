@@ -65,15 +65,15 @@ export default function TwitterApp() {
 
     function listTrends() {
         return (
-            <ul className={"flex flex-wrap justify-center justify-items-center content-center"}>
+            <ul className={"m-5 flex flex-wrap justify-center justify-items-center content-center"}>
                 {trends.map((trend, index) => {
                     return (
                         <li key={index}>
-                            <div className={"bg-black border border-blue-400 px-3 py-1 rounded-full text-white font-bold flex items-center w-max m-1 cursor-pointer"}>
+                            <div className={"text-sm sm:text-base bg-black border border-blue-400 px-3 py-1 rounded-full text-white font-bold flex items-center w-max m-1 cursor-pointer"}>
                                 <a href={trend.url}>{trend.name}</a>
                                 {trend.tweet_volume && (
                                     <span
-                                        className={"text-xs bg-green-500 sm:bg-green-500 text-black sm:text-sm ml-3 px-2 py-0 rounded-full animate-pulse"}>
+                                        className={"hidden sm:block text-sm bg-green-500 sm:bg-green-500 text-black sm:text-sm ml-3 px-2 py-0 rounded-full animate-pulse"}>
                                         {trend.tweet_volume}
                                     </span>
                                 )}
@@ -88,25 +88,26 @@ export default function TwitterApp() {
 
     return (
 
-        <Container className={"max-w-2xl m-5 h-screen sm:mt-20"}>
+        <Container className={"max-w-2xl m-5 h-min sm:mt-20"}>
             <div>
 
-                <SectionLeft><Heading className="sm:text-4xl text-2xl text-white flex items-center backdrop-blur w-max">
+                <SectionLeft><Heading className="sm:text-4xl text-2xl text-white flex items-center backdrop-blur w-max mx-5">
                     <BsTwitter className={"text-green-500 text-6xl mr-3 animate-pulse"}/>
                     Twitter Trends API
-                    <div className={"sm:bg-green-500 text-black text-base ml-3 px-2 py-0 rounded-full"}>1.0.0
+                    <div className={"hidden sm:block bg-green-500 text-black text-base ml-3 px-2 py-0 rounded-full"}>1.0.0
                     </div>
                 </Heading></SectionLeft>
 
                 <SectionRight>
                     <div className={"ml-2 sm:ml-3.5 flex items-center"}>
-                        <p className={"text-white sm:text-xl text-center backdrop-blur"}><LogoArrow/>Click on "WorldWide" to display the default country trending list
-                        or click on the location icon to see trends near you! Each trend is a link to twitter respective content.</p>
+                        <p className={"mx-5 text-white sm:text-xl text-center backdrop-blur"}><LogoArrow/>Click on "WorldWide" to display the default country trending list
+                        or click on the location icon to see trends near you! Each trend is a link to twitter respective content.
+                        </p>
                     </div>
                 </SectionRight>
 
                 <Section delay={1}>
-                    <div className={"flex justify-center my-5"}>
+                    <div className={"flex justify-center m-5"}>
                         <select className="bg-black text-green-500 text-2xl appearance-none rounded-full text-center border border-green-400 cursor-pointer"
                                 onChange={e => setWoeid(e.target.value)}>
                             <option value={'1'}>WorldWide</option>
@@ -119,12 +120,12 @@ export default function TwitterApp() {
                         <FiMapPin className={"ml-3 text-3xl text-white hover:text-yellow-400 cursor-pointer"} onClick={handleLocation}/>
                     </div>
                 </Section>
-            </div>]
+            </div>
 
             <Section delay={1.5}>{listTrends()}
 
-                <div className={"mt-5"}>
-                    <BsPatchExclamation className={"text-yellow-400 text-2xl relative top-3 right-4 animate-spin"}/>
+                <div className={"m-5"}>
+                    <BsPatchExclamation className={"hidden sm:block text-yellow-400 text-2xl relative top-3 right-4 animate-spin"}/>
                     <p className={"text-gray-400 text-base sm:text-xl text-center pb-6"}>Next version includes all Country's ID's stored in
                         a "Redis" DataBase Ready to be accessed by an instant search engine powered by "Algolia".
                     </p>

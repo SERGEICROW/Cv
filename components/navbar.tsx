@@ -1,4 +1,4 @@
-import {Fragment} from 'react'
+import {Fragment, useState} from 'react'
 import {Disclosure, Menu, Transition} from '@headlessui/react'
 import {AdjustmentsIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
 import NextLink from 'next/link'
@@ -7,21 +7,21 @@ import {BiCloudDownload} from "react-icons/bi";
 import {BsPhoneVibrate} from "react-icons/bs";
 import Logo from "./logo";
 import Section from "./section";
-import Modal from './contactModal';
 import {Container} from "@chakra-ui/react";
 
+//NAV BAR NAVIGATION TITLES
 const navigation = [
     {name: 'About', href: '/', current: true},
     {name: 'Stack', href: '/stack', current: false},
     {name: 'Experience', href: '/experience', current: false},
-    {name: 'Api section', href: '/about', current: false},
+    {name: 'Api section', href: '/apis', current: false},
 ]
-
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
+//NAVBAR TITLES LINKS TO PAGE
 const LinkItem = ({href, children, ...props}) => {
     const path = useRouter().asPath
     const active = path === href
@@ -38,6 +38,7 @@ const LinkItem = ({href, children, ...props}) => {
     )
 }
 
+//INDEX PAGE LINK
 const LinkLogo = ({href, children, ...props}) => {
     const path = useRouter().asPath
     const active = path === href
@@ -53,13 +54,53 @@ const LinkLogo = ({href, children, ...props}) => {
     )
 }
 
-const Navbar = props => {
 
+//NAVBAR MAIN
+const Navbar = props => {
     const {path} = props
+
+    //OPEN MODAL
+    const [open, setOpen] = useState(false);
+    const openModal = () => {
+        if (open === false) {
+            setOpen(true);
+        } else {
+            setOpen(false)
+        }
+    }
+
+    //MODAL
+    const Modal = () => {
+        return (
+            <Container
+                className=" fixed backdrop-blur z-50 flex justify-center items-center min-w-full h-screen text-white">
+                <Section>
+                    <div className={"grid grid-rows-1 bg-black m-5 max-w-xl rounded-3xl border border-green-400"}>
+                        <button onClick={() => setOpen(false)}
+                                className={"relative w-16 rotate-45 justify-self-end text-6xl rounded-full bottom-10 left-11 hover:animate-pulse hover:text-green-500"}>
+                            +
+                        </button>
+                        <p className={"mx-5 border border-yellow-400"}>
+                            Born in 1993 in Mexico City, I am a very motivated and dedicated developer
+                            with good, soft and technical skills, am an excellent team worker, willing to
+                            learn and develop new skills and challenges. With an active and dynamic approach to work to
+                            identify
+                            and develop opportunities and solutions, generating a healthy, productive and efficient work
+                            environment.
+                        </p>
+                    </div>
+                </Section>
+            </Container>
+        )
+    }
 
     return (
         <Container>
-            <Modal/>
+
+            {/*MODAL*/}
+            {open && <Modal/>}
+
+            {/*NAVBAR*/}
             <Disclosure as="nav" className="backdrop-blur-sm  z-40 fixed w-auto min-w-full max-w-none h-16">
                 {({open}) => (
                     <>
@@ -138,7 +179,7 @@ const Navbar = props => {
                                                         <a href={"https://docs.google.com/document/d/1oMXSn-fhWWXASvOmfJfmsYK0lUSmvZf7R9KGoGLKPBE/edit?usp=sharing"}>
                                                             <button
                                                                 className="flex items-center w-max text-base sm:text-3xl hover:text-yellow-400 hover:animate-pulse mb-3">
-                                                                -Download CV
+                                                                Download CV
                                                                 <BiCloudDownload
                                                                     className={"hidden sm:block ml-3 text-4xl text-yellow-400"}/>
                                                             </button>
@@ -148,8 +189,9 @@ const Navbar = props => {
                                                 <Menu.Item>
                                                     <Section delay={.1}>
                                                         <button
+                                                            onClick={openModal}
                                                             className="flex items-center w-max text-base sm:text-3xl hover:text-yellow-400 hover:animate-pulse">
-                                                            -Contact Roy
+                                                            Contact Roy
                                                             <BsPhoneVibrate
                                                                 className={"hidden sm:block ml-8 text-4xl text-yellow-400"}/>
                                                         </button>
