@@ -7,7 +7,10 @@ import {BiCloudDownload} from "react-icons/bi";
 import {BsPhoneVibrate} from "react-icons/bs";
 import Logo from "./logo";
 import Section from "./section";
-import {Container} from "@chakra-ui/react";
+import {Container, Heading} from "@chakra-ui/react";
+import {VscCloseAll} from "react-icons/vsc";
+import Form from "./contactForm";
+
 
 //NAV BAR NAVIGATION TITLES
 const navigation = [
@@ -54,7 +57,6 @@ const LinkLogo = ({href, children, ...props}) => {
     )
 }
 
-
 //NAVBAR MAIN
 const Navbar = props => {
     const {path} = props
@@ -69,26 +71,34 @@ const Navbar = props => {
         }
     }
 
+
     //MODAL
     const Modal = () => {
+
+        const recruiterForm = {
+            name: '',
+            mail: '',
+            comment: '',
+        }
+
         return (
-            <Container
-                className=" fixed backdrop-blur z-50 flex justify-center items-center min-w-full h-screen text-white">
+            <Container className=" fixed backdrop-blur z-50 flex justify-center items-center min-w-full h-screen text-white select-none">
                 <Section>
-                    <div className={"grid grid-rows-1 bg-black m-5 max-w-xl rounded-3xl border border-green-400"}>
-                        <button onClick={() => setOpen(false)}
-                                className={"relative w-16 rotate-45 justify-self-end text-6xl rounded-full bottom-10 left-11 hover:animate-pulse hover:text-green-500"}>
-                            +
+
+                    <div className={"flex justify-end w-full"}>
+                        <button
+                            onClick={() => setOpen(false)}
+                            className={"relative top-7 left-2 text-5xl rounded-full text-gray-500 hover:text-gray-300 bg-black p-1.5 "}>
+                            <VscCloseAll/>
                         </button>
-                        <p className={"mx-5 border border-yellow-400"}>
-                            Born in 1993 in Mexico City, I am a very motivated and dedicated developer
-                            with good, soft and technical skills, am an excellent team worker, willing to
-                            learn and develop new skills and challenges. With an active and dynamic approach to work to
-                            identify
-                            and develop opportunities and solutions, generating a healthy, productive and efficient work
-                            environment.
-                        </p>
                     </div>
+
+                    <div className={"bg-black mx-5 rounded-3xl border border-green-400 p-3"}>
+
+                        <Form formId={"add-recruiter-form"} recruitForm={recruiterForm}/>
+
+                    </div>
+
                 </Section>
             </Container>
         )

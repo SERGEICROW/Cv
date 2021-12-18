@@ -88,7 +88,7 @@ export default function TwitterApp() {
 
     return (
 
-        <Container className={"max-w-2xl m-5 h-min sm:mt-20"}>
+        <Container className={"max-w-2xl m-5 h-screen sm:mt-20"}>
             <div>
 
                 <SectionLeft><Heading className="sm:text-4xl text-2xl text-white flex items-center backdrop-blur w-max mx-5">
@@ -100,9 +100,9 @@ export default function TwitterApp() {
 
                 <SectionRight>
                     <div className={"ml-2 sm:ml-3.5 flex items-center"}>
-                        <p className={"mx-5 text-white sm:text-xl text-center backdrop-blur"}><LogoArrow/>Click on "WorldWide" to display the default country trending list
+                        <div className={"mx-5 text-white sm:text-xl text-center backdrop-blur"}><LogoArrow/>Click on "WorldWide" to display the default country trending list
                         or click on the location icon to see trends near you! Each trend is a link to twitter respective content.
-                        </p>
+                        </div>
                     </div>
                 </SectionRight>
 

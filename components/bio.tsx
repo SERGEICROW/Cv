@@ -11,10 +11,10 @@ const Bio = () => {
                     items-center text-white select-none">
                         Rodrigo I. Yanez Carvajal
                     </Heading>
-                    <p className="text-xl sm:text-2xl pl-5 text-green-400 animate-pulse select-none font-mono font-bold">
+                    <div className="text-xl sm:text-2xl pl-5 text-green-400 animate-pulse select-none font-mono font-bold">
                         <LogoArrow/>
                         Full Stack developer
-                    </p>
+                    </div>
                 </div>
                 <div>
                     <img
@@ -31,13 +31,13 @@ const Bio = () => {
                         About me
                     </Heading>
                 </div>
-                <p className="pl-10 text-white text-justify sm:text-xl select-none">
+                <div className="pl-10 text-white text-justify sm:text-xl select-none">
                     <LogoArrow/>
                     Born in 1993 in Mexico City, I am a very motivated and dedicated developer
                     with good, soft and technical skills, am an excellent team worker, willing to
                     learn and develop new skills and challenges. With an active and dynamic approach to work to identify
                     and develop opportunities and solutions, generating a healthy, productive and efficient work environment.
-                </p>
+                </div>
             </div>
 
             <div className="mt-5 flex flex-col flex-wrap mb-5 backdrop-blur rounded-lg">
@@ -46,11 +46,11 @@ const Bio = () => {
                         Timeline
                     </Heading>
                 </div>
-                <p className="pl-10 text-white sm:text-xl text-justify mb-5 select-none ">
+                <div className="pl-10 text-white sm:text-xl text-justify mb-5 select-none ">
                     <LogoArrow/>
                     A brief and general record of my past knowledge and work experience.<br/>
-                    <p className={"animate-pulse mt-3 text-gray-400"}>Click on timelines to watch content:</p>
-                </p>
+                    <div className={"animate-pulse mt-3 text-gray-400"}>Click on timelines to watch content:</div>
+                </div>
             </div>
                <Timeline/>
         </Container>

@@ -49,25 +49,25 @@ export default function Timeline() {
 
                 <div
                     className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
-                    {sep.map((i) => {
-                        return (
-                            <div className="flex items-center justify-center">
-                                {i}
-                            </div>
-                        );
-                    })}
+                    {/*{sep.map((i) => {*/}
+                    {/*    return (*/}
+                    {/*        <div className="flex items-center justify-center">*/}
+                    {/*            {i}*/}
+                    {/*        </div>*/}
+                    {/*    );*/}
+                    {/*})}*/}
 
                 </div>
                 <hr className="relative bottom-1"/>
                 <div className="flex justify-around mb-5 font-bold ">
                     {years2.map((i) => {
                         return (
-                            <div className="animate-pulse block sm:hidden ">{i}</div>
+                            <div key={i.toString()} className="animate-pulse block sm:hidden ">{i}</div>
                         );
                     })}
                     {years1.map((i) => {
                         return (
-                            <div className="animate-pulse hidden sm:block ">{i}</div>
+                            <div key={i.toString()} className="animate-pulse hidden sm:block ">{i}</div>
                         );
                     })}
                 </div>

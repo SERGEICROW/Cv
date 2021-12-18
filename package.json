@@ -14,8 +14,11 @@
     "@emotion/styled": "^11",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@tailwindcss/forms": "^0.4.0",
     "axios": "^0.24.0",
     "framer-motion": "^4",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.2",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -23,6 +26,7 @@
     "twitter": "^1.7.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.0",
     "@types/react": "^17.0.37",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",

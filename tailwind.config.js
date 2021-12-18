@@ -7,7 +7,11 @@ module.exports = {
       ...theme('colors'),
       'primary': '#002306',
     }),
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
+    },
   },
   variants: {
     extend: {},
