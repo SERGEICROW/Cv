@@ -21,8 +21,8 @@ const Logo = () => {
     return (
         <LogoBox className="flex p-2 select-none">
             <Image src={doomguy} width={35} height={1} alt="logo"/>
-            <h5 className="text-white text-2xl sm:text-4xl ">
-                Rodrigo Yanez
+            <h5 className="text-2xl sm:text-4xl hover:text-green-500 animate-pulse">
+                About me...
             </h5>
         </LogoBox>
     )

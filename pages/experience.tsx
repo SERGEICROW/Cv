@@ -10,7 +10,7 @@ import Ai from '../public/images/projectImages/AI.jpeg'
 const Experience = () => (
 
     <Container className="relative z-30 py-16 flex flex-col items-center justify-center
-    border border-green-500 min-h-screen text-yellow-400 select-none">
+    sm:border border-green-500 min-h-screen text-yellow-400 select-none">
         <div className="mb-10 max-w-2xl m-5">
             <SectionLeft><Heading className="flex items-center min-w-min min-h-min justify-start
                 text-4xl text-green-400 select-none">
