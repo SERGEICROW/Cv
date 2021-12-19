@@ -1,16 +1,15 @@
 import {Container, Heading, Image, Link} from "@chakra-ui/react";
-import {useState, useRef} from "react";
+import {useState} from "react";
 import {LogoArrow} from "./logo";
 import Section, {FifTitle, FiTitle, FoTitle, SeTitle, SiTitle, ThTitle} from "./section";
-
 import {Bootcamp, Broker, Engineer, Finances, JetBrains, Pambolitos} from "./css";
-import {smooth} from "popmotion";
+
 
 export default function Timeline() {
 
     const years1 = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
     const years2 = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
-    const sep = ["|", "|", "|", "|", "|", "|", "|", "|", "|", "|",]
+
     const [content, setContent] = useState(null);
 
     const Refresh = ({children}) => {
@@ -35,7 +34,7 @@ export default function Timeline() {
             <Section>
 
                 <div className="grid grid-rows-4 border-1-2 my-3">
-                        <JetBrains onClick={() => setContent(BarContent_3)}/>
+                    <JetBrains onClick={() => setContent(BarContent_3)}/>
                     <div className="flex">
                         <Broker onClick={() => setContent(BarContent_1)}/>
                         <Bootcamp onClick={() => setContent(BarContent_5)}/>
@@ -47,18 +46,15 @@ export default function Timeline() {
                     </div>
                 </div>
 
-                <div
-                    className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
-                    {/*{sep.map((i) => {*/}
-                    {/*    return (*/}
-                    {/*        <div className="flex items-center justify-center">*/}
-                    {/*            {i}*/}
-                    {/*        </div>*/}
-                    {/*    );*/}
-                    {/*})}*/}
-
+                <div className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
+                    {[...Array(10)].map((id, i) =>
+                        <div key={i} className="flex items-center justify-center">
+                            |
+                        </div>)}
                 </div>
+
                 <hr className="relative bottom-1"/>
+
                 <div className="flex justify-around mb-5 font-bold ">
                     {years2.map((i) => {
                         return (
@@ -115,7 +111,8 @@ const BarContent_1 = () => {
                 <Heading className="text-xl sm:text-2xl text-gray-400">
                     06/2015 - 04/2018
                 </Heading>
-                <Heading className="text-2xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+                <Heading
+                    className="text-2xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
                     Financial Institutions
                 </Heading>
                 <Heading className="text-xl sm:text-2xl">

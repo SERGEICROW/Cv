@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Container, Heading} from "@chakra-ui/react";
-import Section from "./section";
+import Section, {SectionRight} from "./section";
 import {FaAsterisk, FaBuilding, FaRegEye} from "react-icons/fa";
 import {RiMailStarFill} from "react-icons/ri";
 import Contact from "./contactInfo";
@@ -137,10 +137,10 @@ const Form = ({formId, recruitForm}) => {
 
               </form>
 
-                {message && <Container className={"flex items-center justify-center space-x-4 w-full animate-pulse"}>
-                  <FaAsterisk className={"text-green-500 text-xl animate-spin-slow animate-pulse"}/>
-                  <p className={"text-green-500 text-2xl"}>Required Fields</p>
-                </Container>}
+                {message && <SectionRight><Container className={"flex items-center justify-center space-x-4 w-full animate-pulse mb-2"}>
+                    <FaAsterisk className={"text-green-500 text-xl animate-spin-slow animate-pulse"}/>
+                    <p className={"text-green-500 text-2xl"}>Required Fields</p>
+                </Container></SectionRight>}
 
               <div className={"text-red-600"}>
                   {Object.keys(errors).map((err, index) => (
@@ -150,7 +150,7 @@ const Form = ({formId, recruitForm}) => {
 
             </Container>}
 
-            {infoDisplay && <Contact/>}
+            {infoDisplay && <Section><Contact/></Section>}
         </>
 
     )

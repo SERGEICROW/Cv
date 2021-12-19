@@ -187,6 +187,7 @@ export default function TechStack() {
                     <StackSubtitle>
                         Node.js
                     </StackSubtitle>
+                    <UsedTo>Site runs with</UsedTo>
                 </StackSubcontainer>
                 <StackSubDescription>
                     Great to build server side Javascript web applications, with a large list of libraries to work with.
@@ -198,6 +199,7 @@ export default function TechStack() {
                     <StackSubtitle>
                         Rest / GraphQl
                     </StackSubtitle>
+                    <UsedTo>Site runs with</UsedTo>
                 </StackSubcontainer>
                 <StackSubDescription>
                     Taking the best out of both worlds.
@@ -241,6 +243,7 @@ export default function TechStack() {
                 <StackSubtitle>
                     MongoDb
                 </StackSubtitle>
+                <UsedTo>Site runs with</UsedTo>
             </StackContainer>
             <StackDescription>
                 Learned at BootCamp, preferred choice when it comes to non relational databases.
