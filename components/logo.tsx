@@ -21,7 +21,7 @@ const Logo = () => {
     return (
         <LogoBox className="flex p-2 select-none">
             <Image src={doomguy} width={35} height={1} alt="logo"/>
-            <h5 className="text-2xl sm:text-4xl hover:text-green-500 animate-pulse">
+            <h5 className="text-2xl sm:text-3xl hover:text-green-500 animate-pulse">
                 About me...
             </h5>
         </LogoBox>
@@ -74,42 +74,35 @@ export const ProjectArrow = () => {
 }
 
 
-export const PythonIcon = () => (<Image src={'/icons/python.png'} width={40} height={40} className="animate-pulse"/>)
-export const JsIcon = () => (<Image src={'/icons/js.png'} width={40} height={40} className="animate-pulse"/>)
-export const TypescriptIcon = () => (<Image src={'/icons/typescript.png'} width={40} height={40} className="animate-pulse"/>)
-export const KotlinIcon = () => (<Image src={'/icons/Kotlin.png'} width={40} height={40} className="animate-pulse"/>)
-export const JavaIcon = () => (<Image src={'/icons/java.png'} width={45} height={45} className="animate-pulse"/>)
-export const ReactIcon = () => (<Image src={'/icons/react.png'} width={45} height={40} className="animate-pulse"/>)
-export const TailwindIcon = () => (<Image src={'/icons/tailwind.png'} width={45} height={30} className="animate-pulse"/>)
-export const HtmlIcon = () => (<Image src={'/icons/html.png'} width={40} height={40} className="animate-pulse"/>)
-export const CssIcon = () => (<Image src={'/icons/css.png'} width={40} height={40} className="animate-pulse"/>)
-export const ChakraIcon = () => (<Image src={'/icons/chakra.png'} width={40} height={40} className="animate-pulse"/>)
-export const NextIcon = () => (<Image src={'/icons/next.png'} width={45} height={45} className="animate-pulse"/>)
+export const PythonIcon = () => (<Image src={'/icons/python.png'} width={35} height={35} className="animate-pulse"/>)
+export const JsIcon = () => (<Image src={'/icons/js.png'} width={35} height={35} className="animate-pulse"/>)
+export const TypescriptIcon = () => (<Image src={'/icons/typescript.png'} width={35} height={35} className="animate-pulse"/>)
+export const KotlinIcon = () => (<Image src={'/icons/Kotlin.png'} width={35} height={35} className="animate-pulse"/>)
+export const JavaIcon = () => (<Image src={'/icons/java.png'} width={40} height={40} className="animate-pulse"/>)
+export const ReactIcon = () => (<Image src={'/icons/react.png'} width={40} height={35} className="animate-pulse"/>)
+export const TailwindIcon = () => (<Image src={'/icons/tailwind.png'} width={40} height={25} className="animate-pulse"/>)
+export const HtmlIcon = () => (<Image src={'/icons/html.png'} width={35} height={35} className="animate-pulse"/>)
+export const CssIcon = () => (<Image src={'/icons/css.png'} width={35} height={35} className="animate-pulse"/>)
+export const ChakraIcon = () => (<Image src={'/icons/chakra.png'} width={35} height={35} className="animate-pulse"/>)
+export const NextIcon = () => (<Image src={'/icons/next.png'} width={40} height={40} className="animate-pulse"/>)
 export const DjangoIcon = () => (<Image src={'/icons/django.png'} width={45} height={45} className="animate-pulse"/>)
 export const NodeIcon = () => (<Image src={'/icons/node.png'} width={45} height={45} className="animate-pulse"/>)
 export const RestIcon = () => (<Image src={'/icons/rest.png'} width={45} height={45} className="animate-pulse"/>)
 export const GraphIcon = () => (<Image src={'/icons/graph.png'} width={45} height={45} className="animate-pulse"/>)
-export const DockerIcon = () => (<Image src={'/icons/docker.png'} width={45} height={40} className="animate-pulse"/>)
+export const DockerIcon = () => (<Image src={'/icons/docker.png'} width={45} height={35} className="animate-pulse"/>)
 export const MysqlIcon = () => (<Image src={'/icons/mysql.png'} width={40} height={40} className="animate-pulse"/>)
-export const SqliteIcon = () => (<Image src={'/icons/sqlite.png'} width={50} height={50} className="animate-pulse"/>)
-export const MongoIcon = () => (<Image src={'/icons/mongo.png'} width={50} height={50} className="animate-pulse"/>)
-export const RedisIcon = () => (<Image src={'/icons/redis.png'} width={50} height={40} className="animate-pulse"/>)
-export const GitIcon = () => (<Image src={'/icons/git.png'} width={50} height={50} className="animate-pulse"/>)
-export const DebianIcon = () => (<Image src={'/icons/debian.png'} width={45} height={45} className="animate-pulse"/>)
-export const WindowsIcon = () => (<Image src={'/icons/windows.png'} width={45} height={45} className="animate-pulse"/>)
-export const IntellIcon = () => (<Image src={'/icons/intellij.png'} width={45} height={45} className="animate-pulse"/>)
-export const PyIcon = () => (<Image src={'/icons/pycharm.png'} width={45} height={45} className="animate-pulse"/>)
-export const VsIcon = () => (<Image src={'/icons/vs.png'} width={40} height={40} className="animate-pulse"/>)
-export const WebsIcon = () => (<Image src={'/icons/webstorm.png'} width={45} height={45} className="animate-pulse"/>)
-export const JsonIcon = () => (<Image src={'/icons/json.png'} width={40} height={40} className="animate-pulse"/>)
+export const SqliteIcon = () => (<Image src={'/icons/sqlite.png'} width={40} height={40} className="animate-pulse"/>)
+export const MongoIcon = () => (<Image src={'/icons/mongo.png'} width={45} height={45} className="animate-pulse"/>)
+export const RedisIcon = () => (<Image src={'/icons/redis.png'} width={50} height={30} className="animate-pulse"/>)
+export const GitIcon = () => (<Image src={'/icons/git.png'} width={40} height={40} className="animate-pulse"/>)
+export const DebianIcon = () => (<Image src={'/icons/debian.png'} width={40} height={40} className="animate-pulse"/>)
+export const WindowsIcon = () => (<Image src={'/icons/windows.png'} width={40} height={40} className="animate-pulse"/>)
+export const IntellIcon = () => (<Image src={'/icons/intellij.png'} width={40} height={40} className="animate-pulse"/>)
+export const PyIcon = () => (<Image src={'/icons/pycharm.png'} width={40} height={40} className="animate-pulse"/>)
+export const VsIcon = () => (<Image src={'/icons/vs.png'} width={35} height={35} className="animate-pulse"/>)
+export const WebsIcon = () => (<Image src={'/icons/webstorm.png'} width={40} height={40} className="animate-pulse"/>)
+export const JsonIcon = () => (<Image src={'/icons/json.png'} width={35} height={35} className="animate-pulse"/>)
 export const XmlIcon = () => (<Image src={'/icons/xml.png'} width={40} height={40} className="animate-pulse"/>)
-
-export const DownloadIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
-    </svg>
-)
 
 export const BackArrow = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -173,7 +166,7 @@ export const FrontIcon = () => (
 )
 
 export const ProjectsIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-12 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
     </svg>

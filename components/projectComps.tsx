@@ -19,7 +19,7 @@ export const Title = ({children}) => (
 )
 
 export const Description = ({children}) => (
-    <p className="text-white text-2xl text-justify my-3">
+    <p className="text-white text-xl text-justify my-3">
         {children}
     </p>
 )

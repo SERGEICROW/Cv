@@ -12,7 +12,7 @@ const Contact = () => {
             <SectionRight>
                 <div className={"flex items-center space-x-2 sm:space-x-4 my-4"}>
                     <BsMailbox2 className={"text-green-500 text-3xl sm:text-5xl"}/>
-                    <p className={"font-mono text-base sm:text-3xl text-green-500 bg-clip-text text-transparent " +
+                    <p className={"text-base sm:text-3xl text-green-500 bg-clip-text text-transparent " +
                     "bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 animate-pulse"}>
                         rodyancar@gmail.com
                     </p>

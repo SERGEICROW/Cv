@@ -350,7 +350,7 @@ export default function TechStack() {
     return (
         <Container>
             {/*PROGRAMING LANGUAGES*/}
-            <div onClick={toggleHandler(1)} className="mb-10">
+            <div onClick={toggleHandler(1)} className="mb-7">
                 <FiTitle><Refresh><StackTitle>
                     <LanguagesIcon/>
                     Programing languages
@@ -359,7 +359,7 @@ export default function TechStack() {
             <Section>{active === 1 && Languages}</Section>
 
             {/*FRAMEWORKS AND TECHNOLOGIES*/}
-            <div onClick={toggleHandler(2)} className="mb-10">
+            <div onClick={toggleHandler(2)} className="mb-7">
                 <SeTitle><Refresh><StackTitle><FwIcon/>
                     Frameworks, API's & Tech's
                 </StackTitle></Refresh></SeTitle>
@@ -367,7 +367,7 @@ export default function TechStack() {
             <Section>{active === 2 && Frameworks}</Section>
 
             {/*DATABASES*/}
-            <div onClick={toggleHandler(3)} className="mb-10">
+            <div onClick={toggleHandler(3)} className="mb-7">
                 <ThTitle><Refresh><StackTitle><DbIcon/>
                     DataBases
                 </StackTitle></Refresh></ThTitle>
@@ -375,7 +375,7 @@ export default function TechStack() {
             <Section>{active === 3 && DataBases}</Section>
 
             {/*VERSION SISTEM CONTROL*/}
-            <div onClick={toggleHandler(4)} className="mb-10">
+            <div onClick={toggleHandler(4)} className="mb-7">
                 <FoTitle><Refresh><StackTitle><VscIcon/>
                     Version Sistem Control
                 </StackTitle></Refresh></FoTitle>
@@ -383,7 +383,7 @@ export default function TechStack() {
             <Section>{active === 4 && Vsc}</Section>
 
             {/*IDE's*/}
-            <div onClick={toggleHandler(5)} className="mb-10">
+            <div onClick={toggleHandler(5)} className="mb-7">
                 <FifTitle><Refresh><StackTitle><IdeIcon/>
                     IDE's
                 </StackTitle></Refresh></FifTitle>
@@ -391,7 +391,7 @@ export default function TechStack() {
             <Section>{active === 5 && Ides}</Section>
 
             {/*OS*/}
-            <div onClick={toggleHandler(6)} className="mb-10">
+            <div onClick={toggleHandler(6)} className="mb-7">
                 <SiTitle><Refresh><StackTitle><OsIcon/>
                     Operative Sistems
                 </StackTitle></Refresh></SiTitle>
@@ -407,7 +407,7 @@ const StackTitle = ({children, ...props}) => {
     return (
         <Section>
             <Heading
-                className="flex items-center min-w-min min-h-min justify-start text-3xl text-green-400 select-none cursor-pointer" {...props}>
+                className="flex items-center min-w-min min-h-min justify-start text-2xl text-green-400 select-none cursor-pointer" {...props}>
                 {children}
             </Heading>
         </Section>
@@ -416,7 +416,7 @@ const StackTitle = ({children, ...props}) => {
 
 const StackContainer = ({children}) => {
     return (
-        <div className="flex items-center my-3 pl-5 text-white text-2xl select-none">
+        <div className="flex items-center my-1 pl-5 text-white text-2xl select-none">
             <StackArrow/>
             {children}
         </div>
@@ -433,7 +433,7 @@ const StackSubtitle = ({children}) => {
 
 const StackSubcontainer = ({children}) => {
     return (
-        <div className="ml-6 sm:ml-16 my-3 pl-2 flex items-center text-white text-2xl select-none">
+        <div className="ml-6 sm:ml-16 my-1 pl-2 flex items-center text-white text-2xl select-none">
             <StackArrow/>
             {children}
         </div>
@@ -443,7 +443,7 @@ const StackSubcontainer = ({children}) => {
 const StackDescription = ({children, ...props}) => {
     return (
         <SectionRight>
-            <div className="hidden sm:block ml-16 max-w-2xl text-gray-200 text-xl  text-justify select-none"
+            <div className="hidden sm:block ml-16 max-w-2xl text-gray-200 text-base  text-justify select-none"
                  {...props}>
                 <StackArrow/>
                 {children}
@@ -455,7 +455,7 @@ const StackDescription = ({children, ...props}) => {
 const StackSubDescription = ({children}) => {
     return (
         <SectionRight>
-            <div className="hidden sm:block ml-32 pr-16 pr-3 max-w-2xl text-gray-200 text-xl text-justify select-none ">
+            <div className="hidden sm:block ml-32 pr-16 pr-3 max-w-2xl text-gray-200 text-base text-justify select-none ">
                 <StackArrow/>
                 {children}
             </div>
@@ -467,7 +467,7 @@ const UsedTo = ({children}) => {
     return (
         <div className="ml-6 px-1 flex items-center border border-yellow-300 text-white rounded-r-lg bg-gradient-to-r
         from-green-500 via-purple-500 to-yellow-500 animate-pulse cursor-help
-        hidden sm:block text-lg">
+        hidden sm:block text-sm">
             {children}
         </div>
     );

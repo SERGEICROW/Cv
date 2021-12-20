@@ -29,10 +29,9 @@ export default function Timeline() {
 
     return (
 
-        <Container
-            className="flex flex-col flex-shrink text-white  mt-5 backdrop-blur-sm">
+        <Container className="flex flex-col flex-shrink text-white backdrop-blur-sm">
             <Section>
-
+                {/*BARS*/}
                 <div className="grid grid-rows-4 border-1-2 my-3">
                     <JetBrains onClick={() => setContent(BarContent_3)}/>
                     <div className="flex">
@@ -55,7 +54,7 @@ export default function Timeline() {
 
                 <hr className="relative bottom-1"/>
 
-                <div className="flex justify-around mb-5 font-bold ">
+                <div className="flex justify-around mb-2 font-bold text-sm">
                     {years2.map((i) => {
                         return (
                             <div key={i.toString()} className="animate-pulse block sm:hidden ">{i}</div>
@@ -68,7 +67,7 @@ export default function Timeline() {
                     })}
                 </div>
 
-                <div className="h-72 sm:h-52">
+                <div className="h-56 sm:h-e">
 
                     <div className="mx-7">
                         <Refresh>
@@ -87,16 +86,16 @@ const BarContent_0 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-xl sm:text-2xl text-gray-400">
+                <Heading className="text-xl text-gray-400">
                     2013 - 2016
                 </Heading>
-                <Heading className="text-2xl sm:text-4xl text-red-700">
+                <Heading className="text-2xl sm:text-3xl text-red-700">
                     UVM
                 </Heading>
-                <Heading className="text-xl sm:text-2xl">
+                <Heading className="text-xl">
                     Finances and banking degree
                 </Heading>
-                <p className="sm:text-xl sm:pl-10 text-white text-justify text-gray-200">
+                <p className="sm:text-lg sm:pl-5 text-white text-justify text-gray-200">
                     <LogoArrow/>
                     Truncated
                 </p>
@@ -108,17 +107,17 @@ const BarContent_1 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-xl sm:text-2xl text-gray-400">
+                <Heading className="text-xl text-gray-400">
                     06/2015 - 04/2018
                 </Heading>
                 <Heading
-                    className="text-2xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+                    className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
                     Financial Institutions
                 </Heading>
-                <Heading className="text-xl sm:text-2xl">
+                <Heading className="text-xl">
                     Broker/Sells
                 </Heading>
-                <p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify text-gray-200">
+                <p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white text-gray-200 sm:leading-5">
                     <LogoArrow/>
                     Financial instruments and mortgage loans sells & consulting.
                 </p>
@@ -131,17 +130,17 @@ const BarContent_2 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-xl sm:text-2xl text-gray-400">
+                <Heading className="text-xl text-gray-400">
                     2018 - 2020
                 </Heading>
                 <Heading
-                    className="text-2xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-red-500">
+                    className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-red-500">
                     Los Pambolitos
                 </Heading>
-                <Heading className="text-xl sm:text-2xl">
+                <Heading className="text-xl">
                     Mexican Restaurant
                 </Heading>
-                <p className="sm:text-xl sm:pl-10 text-white text-justify">
+                <p className="sm:text-lg sm:pl-5 text-white text-justify">
                     <LogoArrow/>
                     Owner and Manager
                 </p>
@@ -154,36 +153,36 @@ const BarContent_3 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <FiTitle><Heading className="text-xl sm:text-2xl text-gray-400 my-px">
+                <FiTitle><Heading className="text-xl text-gray-400 my-px">
                     2020 - Present
                 </Heading></FiTitle>
                 <SeTitle>
                     <Heading
-                        className="text-2xl sm:text-4xl bg-gradient-to-r from-purple-800 via-pink-700 to-transparent my-px subpixel-antialiased font-light">
+                        className="text-2xl sm:text-3xl bg-gradient-to-r from-purple-800 via-pink-700 to-transparent my-px subpixel-antialiased font-light sm:leading-7">
                         Jetbrains
-                        <Heading className="text-3xl sm:text-4xl font-bold pl-8">Academy</Heading>
+                        <Heading className="text-3xl sm:text-3xl font-bold pl-8">Academy</Heading>
                     </Heading>
 
                 </SeTitle>
                 <ThTitle>
                     <div className="flex my-px subpixel-antialiased animate-pulse">
                         <Heading
-                            className="sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
+                            className="sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
                             KOTLIN
                         </Heading>
                         _
                         <Heading
-                            className="sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
+                            className="sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
                             PYTHON
                         </Heading>
                         _
                         <Heading
-                            className="sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
+                            className="sm:text-xd bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
                             JS
                         </Heading>
                     </div>
                 </ThTitle>
-                <FoTitle><p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify my-px">
+                <FoTitle><p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white my-px sm:leading-5">
                     <LogoArrow/>
                     Online Courses based on subject progress and technical questions
                 </p></FoTitle>
@@ -196,17 +195,17 @@ const BarContent_4 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <FiTitle><Heading className="text-xl sm:text-2xl text-gray-500 ">
+                <FiTitle><Heading className="text-xl text-gray-500 ">
                     05/2020 - Present
                 </Heading></FiTitle>
                 <SeTitle><Heading
-                    className="text-2xl sm:text-4xl text-white bg-gradient-to-r from-red-900 via-red-700 to-transparent subpixel-antialiased">
+                    className="text-2xl sm:text-3xl text-white bg-gradient-to-r from-red-900 via-red-700 to-transparent subpixel-antialiased">
                     UVM
                 </Heading></SeTitle>
-                <ThTitle><Heading className="text-xl sm:text-2xl text-yellow-400 animate-pulse">
+                <ThTitle><Heading className="text-xl text-yellow-400 animate-pulse">
                     Software and network's Engineering
                 </Heading></ThTitle>
-                <FoTitle><p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify">
+                <FoTitle><p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white ">
                     <LogoArrow/>
                     In progress, expected to be concluded by the end of 2022
                 </p></FoTitle>
@@ -221,19 +220,19 @@ const BarContent_5 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
             <div className="mb-0 p-5 flex flex-col">
-                <FiTitle><Heading className="text-xl sm:text-2xl text-gray-500">
+                <FiTitle><Heading className="text-xl text-gray-500">
                     03/2021 - 10/2021
                 </Heading></FiTitle>
                 <SeTitle>
                     <div className="animate-pulse bg-gradient-to-r from-yellow-800 via-yellow-600 to-transparent">
-                        <Image src={'/bedu_white.png'} width={110} height={50} alt="logo"/>
+                        <Image src={'/bedu_white.png'} width={110} height={40} alt="logo"/>
                     </div>
                 </SeTitle>
                 <ThTitle><Heading
-                    className="text-xl sm:text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-green-400 to-blue-600">
+                    className="text-xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-green-400 to-blue-600">
                     Python Full Stack Bootcamp
                 </Heading></ThTitle>
-                <FoTitle><p className="w-56 sm:w-64 sm:text-xl sm:pl-10 text-white text-justify">
+                <FoTitle><p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white">
                     <LogoArrow/>
                     7 Month web development bootcamp
                 </p></FoTitle>

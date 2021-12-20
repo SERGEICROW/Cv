@@ -4,12 +4,9 @@ import BackgroundVideo from "../backgroundVideo";
 import Footer from "../footer";
 
 
-// import Footer from '../footer'
-
-
-const Main = ({children, router}) => {
+const Main = ({children}) => {
     return (
-        <div>
+        <div className={"bg-black"}>
             <Head>
                 <title>Rodrigo's - Homepage</title>
                 <link rel="icon" href={"/cv.jpg"}/>
