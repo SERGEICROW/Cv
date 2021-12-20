@@ -1,6 +1,6 @@
 import {Fragment, useState} from 'react'
 import {Disclosure, Menu, Transition} from '@headlessui/react'
-import {AdjustmentsIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
+import {MenuIcon, XIcon} from '@heroicons/react/outline'
 import NextLink from 'next/link'
 import {useRouter} from "next/router";
 import {BiCloudDownload} from "react-icons/bi";
@@ -10,6 +10,7 @@ import Section from "./section";
 import {Container, Heading} from "@chakra-ui/react";
 import {VscCloseAll} from "react-icons/vsc";
 import Form from "./contactForm";
+import {TiThListOutline} from "react-icons/ti";
 
 
 //NAV BAR NAVIGATION TITLES
@@ -31,7 +32,7 @@ const LinkItem = ({href, children, ...props}) => {
     return (
         <NextLink href={href} passHref>
             <div
-                className={active ? "border border-green-400 text-green-400 px-2 py-2 rounded-md text-3xl font-medium cursor-pointer select-none" :
+                className={active ? "border border-green-400 text-green-400 px-2 py-2 rounded-md text-2xl font-medium cursor-pointer select-none" :
                     "text-gray-300 hover:text-green-400 px-2 py-2 rounded-md text-2xl font-medium cursor-pointer border border-transparent select-none"}
                 {...props}
             >
@@ -82,7 +83,8 @@ const Navbar = props => {
         }
 
         return (
-            <Container className=" fixed backdrop-blur z-50 flex justify-center items-center min-w-full h-screen text-white select-none">
+            <Container
+                className=" fixed backdrop-blur z-50 flex justify-center items-center min-w-full h-screen text-white select-none">
                 <Section>
 
                     <div className={"flex justify-end w-full"}>
@@ -159,15 +161,18 @@ const Navbar = props => {
 
                                 </div>
 
-                                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:mr-10">
+                                <div
+                                    className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:mr-10">
 
                                     {/*Settings Dropdown*/}
                                     <Menu as="div" className="w-6 sm:w-0">
 
                                         <div>
                                             <Menu.Button type="button"
-                                                         className="p-1 rounded-full text-gray-400 hover:text-green-400">
-                                                <AdjustmentsIcon className="h-8 w-8" aria-hidden="true"/>
+                                                         className="p-1 rounded-full animate-pulse">
+                                                <TiThListOutline
+                                                    className="h-8 w-8 sm:h-10 sm:w-10 text-green-200"
+                                                    aria-hidden="true"/>
                                             </Menu.Button>
                                         </div>
 
