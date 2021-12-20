@@ -32,7 +32,7 @@ const LinkItem = ({href, children, ...props}) => {
         <NextLink href={href} passHref>
             <div
                 className={active ? "border border-green-400 text-green-400 px-2 py-2 rounded-md text-3xl font-medium cursor-pointer select-none" :
-                    "text-gray-300 hover:text-green-400 px-2 py-2 rounded-md text-3xl font-medium cursor-pointer border border-transparent select-none"}
+                    "text-gray-300 hover:text-green-400 px-2 py-2 rounded-md text-2xl font-medium cursor-pointer border border-transparent select-none"}
                 {...props}
             >
                 {children}
@@ -159,8 +159,7 @@ const Navbar = props => {
 
                                 </div>
 
-                                <div
-                                    className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:mr-10">
 
                                     {/*Settings Dropdown*/}
                                     <Menu as="div" className="w-6 sm:w-0">
@@ -188,10 +187,10 @@ const Navbar = props => {
                                                     <Section>
                                                         <a href={"https://docs.google.com/document/d/1oMXSn-fhWWXASvOmfJfmsYK0lUSmvZf7R9KGoGLKPBE/edit?usp=sharing"}>
                                                             <button
-                                                                className="flex items-center w-max text-base sm:text-3xl hover:text-yellow-400 hover:animate-pulse mb-3">
+                                                                className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse mb-2">
                                                                 Download CV
                                                                 <BiCloudDownload
-                                                                    className={"hidden sm:block ml-3 text-4xl text-yellow-400"}/>
+                                                                    className={"ml-3 text-4xl text-yellow-400"}/>
                                                             </button>
                                                         </a>
                                                     </Section>
@@ -200,10 +199,10 @@ const Navbar = props => {
                                                     <Section delay={.1}>
                                                         <button
                                                             onClick={openModal}
-                                                            className="flex items-center w-max text-base sm:text-3xl hover:text-yellow-400 hover:animate-pulse">
+                                                            className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse">
                                                             Contact Roy
                                                             <BsPhoneVibrate
-                                                                className={"hidden sm:block ml-8 text-4xl text-yellow-400"}/>
+                                                                className={"ml-8 text-4xl text-yellow-400"}/>
                                                         </button>
                                                     </Section>
                                                 </Menu.Item>

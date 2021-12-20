@@ -4,12 +4,10 @@ import {Details, Description, Title, WorkImage, GithubImage} from "../../compone
 import {
     CssIcon,
     DjangoIcon,
-    GitIcon,
     HtmlIcon, JsIcon,
     JsonIcon,
-    NextIcon,
     ProjectArrow,
-    PyIcon, PythonIcon,
+    PythonIcon,
     RestIcon, SqliteIcon
 } from "../../components/logo";
 import React from "react";
@@ -23,17 +21,19 @@ const Work = () => (
 
             <SectionLeft><Title>
                 <SectionLeft><Heading className="flex items-center justify-start
-                text-4xl text-yellow-400 select-none animate-pulse">
+                text-3xl text-yellow-400 select-none animate-pulse">
                     Finde
                 </Heading></SectionLeft>
             </Title></SectionLeft>
 
             <Container className="flex backdrop-blur ml-2">
+
                 <SectionRight>
                     <div className="w-20 pl-4 mt-2 hidden sm:block">
                         <ProjectArrow/>
                     </div>
                 </SectionRight>
+
                 <div className="mt-3 flex flex-col ">
 
                     <SectionRight><Description>
