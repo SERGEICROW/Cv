@@ -1,5 +1,4 @@
-import Section, {FiTitle, SectionDown, SectionLeft, SectionRight, SeTitle} from "../../components/section";
-import {Container, Heading, Link, Th} from "@chakra-ui/react";
+import Section, {FiTitle, SectionLeft, SectionRight} from "../../components/section";
 import {Details, Description, Title, WorkImage, GithubImage} from "../../components/projectComps";
 import {
     CssIcon,
@@ -10,7 +9,8 @@ import {
     PythonIcon,
     RestIcon, SqliteIcon
 } from "../../components/logo";
-import React from "react";
+
+import {Container, Heading, Link} from "@chakra-ui/react";
 
 
 const Work = () => (

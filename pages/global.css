@@ -2,6 +2,10 @@
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Change the white to any color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -12,8 +16,4 @@ input:-webkit-autofill:active{
 
 input:-webkit-autofill{
     -webkit-text-fill-color: white !important;
-}
-
-html {
-    scroll-behavior: smooth;
 }

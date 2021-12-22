@@ -1,9 +1,11 @@
 import NextLink from 'next/link'
-import {Heading, Image, Link, Badge} from '@chakra-ui/react'
-import {BackArrow, ProjectsIcon} from "./logo";
+import {BackArrow} from "./logo";
 import {SectionRight} from "./section";
 
-''
+import {Heading, Image} from '@chakra-ui/react'
+
+//SMALL COMPONENTS USED ALONG WEBSITE
+
 export const Title = ({children}) => (
     <div className="">
         <div className="text-green-400 flex items-center cursor-pointer hover:underline">

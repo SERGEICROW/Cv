@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+//COntact Form Database model
 const RecruiterSchema = new mongoose.Schema({
     name: {
         type: String,

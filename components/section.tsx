@@ -1,15 +1,13 @@
 import {motion} from 'framer-motion'
 import {chakra, shouldForwardProp} from '@chakra-ui/react'
-import {render} from "react-dom";
-import {renderCar} from "use-sidecar";
-import {useEffect} from "react";
+
+//HANDLES ALL CONTENT ANIMATION ENTRANCES TAGS
 
 const StyledDiv = chakra(motion.div, {
     shouldForwardProp: prop => {
         return shouldForwardProp(prop) || prop === 'transition'
     }
 })
-
 
 const Section = ({children, delay = 0}) => (
 

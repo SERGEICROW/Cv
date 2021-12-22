@@ -1,8 +1,10 @@
+import {SectionRight} from "./section";
+
 import {Container} from "@chakra-ui/react";
 import {BsMailbox2, BsPhoneFill} from "react-icons/bs";
 import {MdCopyAll} from "react-icons/md";
-import {SectionRight} from "./section";
 
+//Modal with my contact info
 const Contact = () => {
 
 

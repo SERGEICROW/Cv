@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 
+//Timeline bars styling for position inside timeline
 const Bar0 = styled("hr")`
   width: 20%;
   margin-left: 75%;
@@ -26,6 +27,7 @@ const Bar5 = styled("hr")`
   height: 12px;
 `
 
+//Timeline Bar colors
 export const JetBrains = ({...props}) => {
     return <Bar0 className="rounded-full border-0 cursor-pointer my-0.5
                 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:animate-pulse

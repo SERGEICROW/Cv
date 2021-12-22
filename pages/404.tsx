@@ -1,9 +1,5 @@
 import NextLink from 'next/link'
-import {
-    Box,
-    Container,
-    Button, Image
-} from '@chakra-ui/react'
+import {Box, Container, Button} from '@chakra-ui/react'
 import {SuperLogo, SuperLogo3} from '../components/logo'
 
 const NotFound = () => {

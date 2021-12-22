@@ -2,7 +2,7 @@ import NextLink from 'next/link'
 import Image from 'next/image'
 
 
-
+//Grid to display portfolio projects
 export const WorkGridItems = ({ children, id, title, image }) => (
     <div className="mb-5 sm:w-full text-center border border-dashed border-green-400 hover:hue-rotate-180 ">
         <NextLink href={`/projects/${id}`}>

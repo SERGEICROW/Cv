@@ -1,6 +1,8 @@
 import Image from 'next/image'
+
 import styled from '@emotion/styled'
 
+//Tag to handle transition
 const LogoBox = styled.span`
   img {
     transition: 200ms ease;
@@ -11,10 +13,12 @@ const LogoBox = styled.span`
   }
 `
 
+//Tag to handle arrow logos
 const ArrowBox = styled.span`
 
 `
 
+//Main logo next to "About Me" in navbar
 const Logo = () => {
     const doomguy = `/doomguy.gif`
 
@@ -29,6 +33,7 @@ const Logo = () => {
 }
 export default Logo
 
+//A 404 logo
 export const SuperLogo = () => {
     const err = `/404_1.gif`
     return (
@@ -37,6 +42,8 @@ export const SuperLogo = () => {
         </div>
     )
 }
+
+//A second 404 logo
 export const SuperLogo3 = () => {
     const err = `/404_3.gif`
     return (
@@ -47,7 +54,7 @@ export const SuperLogo3 = () => {
 }
 
 
-
+//Main arrow logo used along website
 export const LogoArrow = () => {
     const arrow = '/arrow.svg'
     return (
@@ -56,6 +63,8 @@ export const LogoArrow = () => {
         </ArrowBox>
     )
 }
+
+//Arrow logo used in stack
 export const StackArrow = () => {
     const arrow = '/arrow.svg'
     return (
@@ -64,6 +73,8 @@ export const StackArrow = () => {
         </ArrowBox>
     )
 }
+
+//Arrow used in portofio projects tag
 export const ProjectArrow = () => {
     const arrow = '/arrow.svg'
     return (
@@ -73,7 +84,7 @@ export const ProjectArrow = () => {
     )
 }
 
-
+//ICONS IMPORTED AS STATIC IMAGES
 export const PythonIcon = () => (<Image src={'/icons/python.png'} width={35} height={35} className="animate-pulse"/>)
 export const JsIcon = () => (<Image src={'/icons/js.png'} width={35} height={35} className="animate-pulse"/>)
 export const TypescriptIcon = () => (<Image src={'/icons/typescript.png'} width={35} height={35} className="animate-pulse"/>)
@@ -104,6 +115,7 @@ export const WebsIcon = () => (<Image src={'/icons/webstorm.png'} width={40} hei
 export const JsonIcon = () => (<Image src={'/icons/json.png'} width={35} height={35} className="animate-pulse"/>)
 export const XmlIcon = () => (<Image src={'/icons/xml.png'} width={40} height={40} className="animate-pulse"/>)
 
+//ICONS IMPORTED AS SVG
 export const BackArrow = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>

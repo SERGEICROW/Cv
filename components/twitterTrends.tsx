@@ -1,22 +1,12 @@
-import {Container, Heading} from "@chakra-ui/react";
 import {useState, useEffect} from "react";
-import axios from 'axios';
-import {BsPatchExclamation, BsTwitter} from "react-icons/bs";
-import {FiMapPin} from "react-icons/fi";
 import {LogoArrow} from "./logo";
 import Section, {SectionLeft, SectionRight} from "./section";
+import axios from 'axios';
 
-// const dataEndpoint = 'https://api.twitter.com/1.1/trends/place.json?id=1'
-//
-// export async function getServerSideProps() {
-//     const res = await fetch(dataEndpoint);
-//     const data = await res.json();
-//     return {
-//         props: {
-//             data
-//         }
-//     }
-// }
+import {Container, Heading} from "@chakra-ui/react";
+import {BsPatchExclamation, BsTwitter} from "react-icons/bs";
+import {FiMapPin} from "react-icons/fi";
+
 
 export default function TwitterApp() {
 
@@ -25,7 +15,7 @@ export default function TwitterApp() {
 
 
     useEffect(() => getTrends(), [woeid])
-
+    //Get trends function conected to Next js API route directory
     function getTrends() {
         axios.get('/api/trends', {
             params: {
@@ -36,7 +26,7 @@ export default function TwitterApp() {
             setTrends(response.data[0].trends)
         }).catch(error => console.log(error.message))
     }
-
+    //Geolocation function
     function handleLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
