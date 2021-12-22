@@ -194,7 +194,7 @@ const Navbar = props => {
 
                                                 <Menu.Item>
                                                     <Section>
-                                                        <a href={"https://drive.google.com/file/d/1-kbY5OYJeC_n7XAxnFNDEm_0d6N393vM/view?usp=sharing"} target={"_blank"}>
+                                                        <a href={"https://drive.google.com/file/d/1lQskYWLlaKzItUZGYjLvQLVUjoDaBTxg/view?usp=sharing"} target={"_blank"}>
                                                             <button
                                                                 className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse mb-2">
                                                                 Download CV
