@@ -3,7 +3,7 @@ import Navbar from "../navbar"
 import BackgroundVideo from "../backgroundVideo";
 import Footer from "../footer";
 
-
+//COMPLETE WEB HEAD LAYOUT, CONTAINS BACKGROUND VIDEO, NAVBAR, THE CHILDREN COMPONENTS AND FOOTER
 const Main = ({children}) => {
     return (
         <div className={"bg-black"}>

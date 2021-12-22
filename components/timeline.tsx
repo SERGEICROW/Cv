@@ -1,22 +1,22 @@
-import {Container, Heading, Image, Link} from "@chakra-ui/react";
 import {useState} from "react";
 import {LogoArrow} from "./logo";
 import Section, {FifTitle, FiTitle, FoTitle, SeTitle, SiTitle, ThTitle} from "./section";
 import {Bootcamp, Broker, Engineer, Finances, JetBrains, Pambolitos} from "./css";
 
+import {Container, Heading, Image} from "@chakra-ui/react";
 
+//Timeline main components
 export default function Timeline() {
-
+    //Timeline years
     const years1 = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
     const years2 = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
-
+    //Set especific timeline content when clicked hook
     const [content, setContent] = useState(null);
 
+    //Recreates animation any time timeline content is generated
     const Refresh = ({children}) => {
         const active = content != setContent
-
         if (active) {
-
             return (
                 <Section>
                     <div>
@@ -28,11 +28,12 @@ export default function Timeline() {
     }
 
     return (
-
         <Container className="flex flex-col flex-shrink text-white backdrop-blur-sm">
             <Section>
                 {/*BARS*/}
-                <div className="grid grid-rows-4 border-1-2 my-3">
+                <a
+                    href={"#timeline_content"}
+                    className="grid grid-rows-4 border-1-2 my-3">
                     <JetBrains onClick={() => setContent(BarContent_3)}/>
                     <div className="flex">
                         <Broker onClick={() => setContent(BarContent_1)}/>
@@ -43,7 +44,7 @@ export default function Timeline() {
                         <Finances onClick={() => setContent(BarContent_0)}/>
                         <Engineer onClick={() => setContent(BarContent_4)}/>
                     </div>
-                </div>
+                </a>
 
                 <div className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
                     {[...Array(10)].map((id, i) =>
@@ -69,7 +70,7 @@ export default function Timeline() {
 
                 <div className="h-56 sm:h-e">
 
-                    <div className="mx-7">
+                    <div className="mx-7" id={"timeline_content"}>
                         <Refresh>
                             {content}
                         </Refresh>
@@ -242,6 +243,7 @@ const BarContent_5 = () => {
                 <SiTitle>
                     <Image src={'/credly.png'} width={80} height={30} alt="logo" className="animate-pulse"/>
                     <a href={`https://credly.com/users/rodrigo-yanez.b981911e`}
+                       target={"_blank"}
                        className="text-white underline hover:text-blue-500">Badge url</a>
                 </SiTitle>
             </FifTitle>

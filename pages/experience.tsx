@@ -1,11 +1,11 @@
-import {Container, Heading, SimpleGrid} from "@chakra-ui/react";
-import Section, {FiTitle, SectionLeft, SectionRight} from "../components/section";
+import {SectionLeft, SectionRight} from "../components/section";
 import {ProjectArrow, ProjectsIcon} from "../components/logo";
-import React from "react";
 import {WorkGridItems} from "../components/grids";
+
 import Finde from '../public/images/projectImages/finde.png'
 import App from '../public/images/projectImages/app.jpg'
 import Ai from '../public/images/projectImages/AI.jpeg'
+import {Container, Heading} from "@chakra-ui/react";
 
 const Experience = () => (
 

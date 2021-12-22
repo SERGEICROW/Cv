@@ -1,8 +1,6 @@
 import Section from "../components/section";
 import Bio from "../components/bio";
 
-
-
 import {Container} from "@chakra-ui/react";
 
 

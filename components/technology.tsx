@@ -1,5 +1,6 @@
-import {Container, Heading} from "@chakra-ui/react";
+import React, {useState} from "react";
 import {ChakraIcon, JsonIcon, StackArrow, XmlIcon} from "./logo";
+import {Container, Heading} from "@chakra-ui/react";
 import Section, {
     FifTitle,
     FiTitle,
@@ -10,7 +11,6 @@ import Section, {
     SeTitle, SiTitle,
     ThTitle
 } from "./section";
-import React, {useState} from "react";
 import {
     DebianIcon,
     GitIcon,

@@ -1,15 +1,19 @@
 import {Fragment, useState} from 'react'
-import {Disclosure, Menu, Transition} from '@headlessui/react'
-import {MenuIcon, XIcon} from '@heroicons/react/outline'
+
 import NextLink from 'next/link'
 import {useRouter} from "next/router";
-import {BiCloudDownload} from "react-icons/bi";
-import {BsPhoneVibrate} from "react-icons/bs";
+
 import Logo from "./logo";
 import Section from "./section";
-import {Container, Heading} from "@chakra-ui/react";
-import {VscCloseAll} from "react-icons/vsc";
 import Form from "./contactForm";
+
+import {Disclosure, Menu, Transition} from '@headlessui/react'
+import {MenuIcon, XIcon} from '@heroicons/react/outline'
+
+import {Container} from "@chakra-ui/react";
+import {VscCloseAll} from "react-icons/vsc";
+import {BiCloudDownload} from "react-icons/bi";
+import {BsPhoneVibrate} from "react-icons/bs";
 import {TiThListOutline} from "react-icons/ti";
 
 
@@ -190,7 +194,7 @@ const Navbar = props => {
 
                                                 <Menu.Item>
                                                     <Section>
-                                                        <a href={"https://docs.google.com/document/d/1oMXSn-fhWWXASvOmfJfmsYK0lUSmvZf7R9KGoGLKPBE/edit?usp=sharing"}>
+                                                        <a href={"https://drive.google.com/file/d/1-kbY5OYJeC_n7XAxnFNDEm_0d6N393vM/view?usp=sharing"} target={"_blank"}>
                                                             <button
                                                                 className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse mb-2">
                                                                 Download CV

@@ -1,26 +1,30 @@
 import {useState} from "react";
-import {Container, Heading} from "@chakra-ui/react";
 import Section, {SectionRight} from "./section";
-import {FaAsterisk, FaBuilding, FaRegEye} from "react-icons/fa";
-import {RiMailStarFill} from "react-icons/ri";
 import Contact from "./contactInfo";
 
-/* The POST method adds a new entry in the mongodb database. */
+import {Container, Heading} from "@chakra-ui/react";
+import {FaAsterisk, FaBuilding, FaRegEye} from "react-icons/fa";
+import {RiMailStarFill} from "react-icons/ri";
+
+
+
 const Form = ({formId, recruitForm}) => {
     const contentType = 'application/json'
+    //Handle errors hook
     const [errors, setErrors] = useState({})
+    //Messages hook
     const [message, setMessage] = useState(false)
-
+    //Displays form and info hooks
     const [formDisplay, setFormDisplay] = useState(true)
     const [infoDisplay, setInfoDisplay] = useState(false)
 
-
+    //Creates form with values
     const [form, setForm] = useState({
         name: recruitForm.name,
         mail: recruitForm.mail,
         comment: recruitForm.comment,
     })
-
+    //Adds new entry to MongoDb database
     const postData = async (form) => {
         try {
             const res = await fetch('api/dataIndex', {
@@ -64,7 +68,7 @@ const Form = ({formId, recruitForm}) => {
         }
     }
 
-    /* Makes sure pet info is filled*/
+    //Makes sure info is valid
     const formValidate = () => {
         let err = {}
         if (!form.name) { // @ts-ignore

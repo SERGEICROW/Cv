@@ -2,6 +2,7 @@ import {Container, Heading} from "@chakra-ui/react";
 import {LogoArrow} from "./logo";
 import Timeline from "./timeline";
 
+//BIO COMPONENT CONTAINS TIMELINE
 const Bio = () => {
     return (
         <Container className="max-w-xl select-none m-5">
