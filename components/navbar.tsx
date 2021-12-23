@@ -1,4 +1,4 @@
-import {Fragment, useState} from 'react'
+import {useState} from 'react'
 
 import NextLink from 'next/link'
 import {useRouter} from "next/router";
@@ -7,7 +7,7 @@ import Logo, {EnglishIcon, SpanishIcon} from "./logo";
 import Section, {NavMenus} from "./section";
 import Form from "./contactForm";
 
-import {Disclosure, Menu, Transition} from '@headlessui/react'
+import {Disclosure, Menu} from '@headlessui/react'
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
 
 import {Container} from "@chakra-ui/react";
