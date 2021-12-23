@@ -78,7 +78,7 @@ export default function TwitterApp() {
 
     return (
 
-        <Container className={"max-w-2xl m-10 h-screen sm:mt-20"}>
+        <Container className={"max-w-2xl  sm:mt-20"}>
             <div>
 
                 <SectionLeft><Heading className="sm:text-4xl text-2xl text-white flex items-center backdrop-blur w-max mx-5">
@@ -114,7 +114,7 @@ export default function TwitterApp() {
 
             <Section delay={1.5}>{listTrends()}
 
-                <div className={"m-5"}>
+                <div className={"m-5 border"}>
                     <BsPatchExclamation className={"hidden sm:block text-yellow-400 text-2xl relative top-3 right-4"}/>
                     <p className={"text-gray-400 text-base text-center pb-6"}>Next version includes all Country's ID's stored in
                         a "Redis" DataBase Ready to be accessed by an instant search engine powered by "Algolia".
