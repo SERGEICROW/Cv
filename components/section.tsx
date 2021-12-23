@@ -1,5 +1,7 @@
 import {motion} from 'framer-motion'
 import {chakra, shouldForwardProp} from '@chakra-ui/react'
+import {Transition} from "@headlessui/react";
+import {Fragment} from "react";
 
 //HANDLES ALL CONTENT ANIMATION ENTRANCES TAGS
 
@@ -22,6 +24,23 @@ const Section = ({children, delay = 0}) => (
 )
 
 export default Section
+
+//For Nav Menu
+export const NavMenus = ({children, delay = 0}) => (
+
+    <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+    >
+        {children}
+    </Transition>
+)
+
 //For Stack Subtitles
 export const SectionDown = ({children, delay = 0}) => (
 

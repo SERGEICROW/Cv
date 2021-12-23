@@ -1,13 +1,13 @@
-import {Fragment, useState} from 'react'
+import {useState} from 'react'
 
 import NextLink from 'next/link'
 import {useRouter} from "next/router";
 
-import Logo from "./logo";
-import Section from "./section";
+import Logo, {EnglishIcon, SpanishIcon} from "./logo";
+import Section, {NavMenus} from "./section";
 import Form from "./contactForm";
 
-import {Disclosure, Menu, Transition} from '@headlessui/react'
+import {Disclosure, Menu} from '@headlessui/react'
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
 
 import {Container} from "@chakra-ui/react";
@@ -168,44 +168,51 @@ const Navbar = props => {
                                 <div
                                     className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:mr-10">
 
+
                                     {/*Settings Dropdown*/}
                                     <Menu as="div" className="w-6 sm:w-0">
 
-                                        <div>
-                                            <Menu.Button type="button"
-                                                         className="p-1 rounded-full animate-pulse">
-                                                <TiThListOutline
-                                                    className="h-8 w-8 sm:h-10 sm:w-10 text-green-200"
-                                                    aria-hidden="true"/>
-                                            </Menu.Button>
-                                        </div>
+                                        <Menu.Button type="button" className="p-1 rounded-full animate-pulse">
+                                            <TiThListOutline
+                                                className="h-8 w-8 sm:h-10 sm:w-10 text-green-200"
+                                                aria-hidden="true"/>
+                                        </Menu.Button>
 
-                                        <Transition
-                                            as={Fragment}
-                                            enter="transition ease-out duration-100"
-                                            enterFrom="transform opacity-0 scale-95"
-                                            enterTo="transform opacity-100 scale-100"
-                                            leave="transition ease-in duration-75"
-                                            leaveFrom="transform opacity-100 scale-100"
-                                            leaveTo="transform opacity-0 scale-95"
-                                        >
+
+                                        <NavMenus>
                                             <Menu.Items className="z-30 flex flex-col p-3 origin-top-right absolute right-0 mt-2 rounded-md
                                             bg-black text-white text-2xl border border-green-400">
-
                                                 <Menu.Item>
                                                     <Section>
-                                                        <a href={"https://drive.google.com/file/d/1Dg8HF8u7Y8DoSAFYHRidYIPOB3lUUGuP/view?usp=sharing"} target={"_blank"}>
-                                                            <button
-                                                                className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse mb-2">
+                                                        <Menu>
+                                                            <Menu.Button
+                                                                type={"button"}
+                                                                className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse mb-2"
+                                                            >
                                                                 Download CV
                                                                 <BiCloudDownload
                                                                     className={"ml-3 text-4xl text-yellow-400"}/>
-                                                            </button>
-                                                        </a>
+                                                            </Menu.Button>
+                                                            <NavMenus>
+                                                                <Menu.Items className={"absolute"}>
+                                                                    <Menu.Item>
+                                                                        <div className={"relative right-14 bottom-14 flex flex-col items-center pt-2 bg-black sm:bg-transparent rounded-full"}>
+                                                                            <a href={"https://drive.google.com/drive/folders/1_pBgaGA9ZN1Y8INBTkSJM0vb4F393qHH?usp=sharing"} target={"_blank"}>
+                                                                                <EnglishIcon/>
+                                                                            </a>
+                                                                            <a href={"https://drive.google.com/drive/folders/1SbvJFjTDPYPvdk3oGcWiKI0m0EzfuJCj?usp=sharing"} target={"_blank"}>
+                                                                                <SpanishIcon/>
+                                                                            </a>
+                                                                        </div>
+                                                                    </Menu.Item>
+                                                                </Menu.Items>
+                                                            </NavMenus>
+                                                        </Menu>
                                                     </Section>
                                                 </Menu.Item>
+
                                                 <Menu.Item>
-                                                    <Section delay={.1}>
+                                                    <Section>
                                                         <button
                                                             onClick={openModal}
                                                             className="flex items-center w-max text-xl sm:text-2xl hover:text-yellow-400 hover:animate-pulse">
@@ -215,12 +222,14 @@ const Navbar = props => {
                                                         </button>
                                                     </Section>
                                                 </Menu.Item>
-
                                             </Menu.Items>
-                                        </Transition>
+                                        </NavMenus>
                                     </Menu>
+                                    {/*Language*/}
+
 
                                 </div>
+
                             </div>
                         </div>
 
