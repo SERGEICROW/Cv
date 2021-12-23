@@ -114,6 +114,8 @@ export const VsIcon = () => (<Image src={'/icons/vs.png'} width={35} height={35}
 export const WebsIcon = () => (<Image src={'/icons/webstorm.png'} width={40} height={40} className="animate-pulse"/>)
 export const JsonIcon = () => (<Image src={'/icons/json.png'} width={35} height={35} className="animate-pulse"/>)
 export const XmlIcon = () => (<Image src={'/icons/xml.png'} width={40} height={40} className="animate-pulse"/>)
+export const SpanishIcon = () => (<Image src={'/icons/spanishIcon.png'} width={38} height={38}/>)
+export const EnglishIcon = () => (<Image src={'/icons/English-icon.png'} width={35} height={35}/>)
 
 //ICONS IMPORTED AS SVG
 export const BackArrow = () => (

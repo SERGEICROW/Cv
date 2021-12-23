@@ -46,6 +46,7 @@ export default function Timeline() {
                     </div>
                 </a>
 
+                {/*Vertical bars on timeline*/}
                 <div className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
                     {[...Array(10)].map((id, i) =>
                         <div key={i} className="flex items-center justify-center">
@@ -54,7 +55,7 @@ export default function Timeline() {
                 </div>
 
                 <hr className="relative bottom-1"/>
-
+                {/*Responsive years*/}
                 <div className="flex justify-around mb-2 font-bold text-sm">
                     {years2.map((i) => {
                         return (

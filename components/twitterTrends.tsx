@@ -60,7 +60,7 @@ export default function TwitterApp() {
                     return (
                         <li key={index}>
                             <div className={"text-sm bg-black border border-blue-400 px-3 py-1 rounded-full text-white font-bold flex items-center w-max m-1 cursor-pointer"}>
-                                <a href={trend.url}>{trend.name}</a>
+                                <a href={trend.url} target={"_blank"}>{trend.name}</a>
                                 {trend.tweet_volume && (
                                     <span
                                         className={"hidden sm:block text-xs bg-green-500 sm:bg-green-500 text-black ml-3 px-2 py-0 rounded-full animate-pulse"}>
@@ -115,7 +115,7 @@ export default function TwitterApp() {
             <Section delay={1.5}>{listTrends()}
 
                 <div className={"m-5"}>
-                    <BsPatchExclamation className={"hidden sm:block text-yellow-400 text-2xl relative top-3 right-4 animate-spin"}/>
+                    <BsPatchExclamation className={"hidden sm:block text-yellow-400 text-2xl relative top-3 right-4"}/>
                     <p className={"text-gray-400 text-base text-center pb-6"}>Next version includes all Country's ID's stored in
                         a "Redis" DataBase Ready to be accessed by an instant search engine powered by "Algolia".
                     </p>
