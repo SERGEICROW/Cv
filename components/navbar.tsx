@@ -193,6 +193,7 @@ const Navbar = props => {
                                                                 <BiCloudDownload
                                                                     className={"ml-3 text-4xl text-yellow-400"}/>
                                                             </Menu.Button>
+                                                            {/*Language Cv Download icons*/}
                                                             <NavMenus>
                                                                 <Menu.Items className={"absolute"}>
                                                                     <Menu.Item>

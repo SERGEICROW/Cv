@@ -30,7 +30,7 @@ const Experience = () => (
                         An Android app to organize information, set custom forms and upload to private cloud.
                     </WorkGridItems>
                     <WorkGridItems id="404" title="AI Recon" image={Ai}>
-                        Machine learning program to detect patterns on pictures and video.
+                        Machine learning desktop demo to detect patterns on images and video using an Intel library, "OpenCV".
                     </WorkGridItems>
                 </div>
             </Container></SectionRight>
