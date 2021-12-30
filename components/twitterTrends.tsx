@@ -78,9 +78,8 @@ export default function TwitterApp() {
 
     return (
 
-        <Container className={"max-w-2xl  sm:mt-20"}>
+        <Container className={"max-w-2xl  sm:mt-2 mt-32"}>
             <div>
-
                 <SectionLeft><Heading className="sm:text-4xl text-2xl text-white flex items-center backdrop-blur w-max mx-5">
                     <BsTwitter className={"text-green-500 text-5xl mr-3 animate-pulse"}/>
                     Twitter Trends API
