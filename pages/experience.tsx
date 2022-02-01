@@ -3,7 +3,7 @@ import {ProjectArrow, ProjectsIcon} from "../components/logo";
 import {WorkGridItems} from "../components/grids";
 
 import Finde from '../public/images/projectImages/finde.png'
-import App from '../public/images/projectImages/app.jpg'
+import Snap from '../public/images/projectImages/snap/snap_main.png'
 import Ai from '../public/images/projectImages/AI.jpeg'
 import {Container, Heading} from "@chakra-ui/react";
 
@@ -24,10 +24,10 @@ const Experience = () => (
                 </div>
                 <div className="grid-cols-min sm:grid gap-4 grid-cols-2 mt-3">
                     <WorkGridItems id="finde" title="Finde" image={Finde}>
-                        An e-commerce web application connected to an API from Google maps with geolocalization functions.
+                        An e-commerce web application connected to an API from Google maps functions.
                     </WorkGridItems>
-                    <WorkGridItems id="404" title="Snap Grid" image={App}>
-                        An Android app to organize information, set custom forms and upload to private cloud.
+                    <WorkGridItems id="snapGrid" title="Snap Grid" image={Snap}>
+                        A React Native app to compare data which users introduce, still in development.
                     </WorkGridItems>
                     <WorkGridItems id="404" title="AI Recon" image={Ai}>
                         Machine learning desktop demo to detect patterns on images and video using an Intel library, "OpenCV".
