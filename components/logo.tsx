@@ -116,6 +116,10 @@ export const JsonIcon = () => (<Image src={'/icons/json.png'} width={35} height=
 export const XmlIcon = () => (<Image src={'/icons/xml.png'} width={40} height={40} className="animate-pulse"/>)
 export const SpanishIcon = () => (<Image src={'/icons/spanishIcon.png'} width={38} height={38} className={"hover:animate-pulse"}/>)
 export const EnglishIcon = () => (<Image src={'/icons/English-icon.png'} width={35} height={35} className={"hover:animate-pulse"}/>)
+export const OracleSQL = () => (<Image src={'/icons/oracleSql.png'} width={40} height={45} className={"animate-pulse"}/>)
+export const Cicon = () => (<Image src={'/icons/cLogo.png'} width={40} height={45} className={"animate-pulse"}/>)
+export const RedHatIcon = () => (<Image src={'/icons/redHatLogo.png'} width={40} height={35} className={"animate-pulse"}/>)
+export const WebLogic = () => (<Image src={'/icons/webLogic.svg'} width={40} height={45} className={"animate-pulse"}/>)
 
 //ICONS IMPORTED AS SVG
 export const BackArrow = () => (

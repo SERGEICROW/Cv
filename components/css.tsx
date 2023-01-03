@@ -1,31 +1,41 @@
 import styled from "@emotion/styled";
 
 //Timeline bars styling for position inside timeline
+//Jetbrains
 const Bar0 = styled("hr")`
-  width: 20%;
-  margin-left: 75%;
+  width: 34%;
+  margin-left: 61%;
   height: 15px;`
+//Broker
 const Bar1 = styled("hr")`
-  width: 29%;
+  width: 32%;
+  margin-left: 11%;
+  height: 15px;`
+//Bootcamp
+const Bar2 = styled("hr")`
+  width: 9%;
   margin-left: 30%;
   height: 15px;`
-const Bar2 = styled("hr")`
-  width: 7%;
-  margin-left: 29%;
-  height: 15px;`
+//Pambolitos
 const Bar3 = styled("hr")`
-  width: 21%;
-  margin-left: 59%;
+  width: 20%;
+  margin-left: 40%;
   height: 15px;`
+//Finances
 const Bar4 = styled("hr")`
-  width: 30%;
+  width: 12%;
   margin-left: 5%;
   height: 15px;`
+//Engineer
 const Bar5 = styled("hr")`
-  width: 15%;
-  margin-left: 45%;
-  height: 15px;
-`
+  width: 29%;
+  margin-left: 49%;
+  height: 15px;`
+//Softtek
+const Bar6 = styled("hr")`
+  width: 10%;
+  margin-left: 3%;
+  height: 15px;`
 
 //Timeline Bar colors
 export const JetBrains = ({...props}) => {
@@ -57,5 +67,10 @@ export const Finances = ({...props}) => {
 export const Engineer = ({...props}) => {
     return <Bar5 className="rounded-full border-0 cursor-pointer my-0.5
                     bg-gradient-to-r from-red-800 via-red-600 to-red-900 transition duration-500
+                    ease-in-out transform hover:hue-rotate-180 hover:scale-110 hover:animate-pulse"{...props}/>
+}
+export const Softtek = ({...props}) => {
+    return <Bar6 className="rounded-full border-0 cursor-pointer my-0.5
+                    bg-gradient-to-r from-green-500 via-green-300 to-blue-800 transition duration-500
                     ease-in-out transform hover:hue-rotate-180 hover:scale-110 hover:animate-pulse"{...props}/>
 }
