@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {ChakraIcon, JsonIcon, StackArrow, XmlIcon} from "./logo";
+import {ChakraIcon, JsonIcon, RedHatIcon, StackArrow, WebLogic, XmlIcon} from "./logo";
 import {Container, Heading} from "@chakra-ui/react";
 import Section, {
     FifTitle,
@@ -45,7 +45,9 @@ import {
     NodeIcon,
     RestIcon,
     GraphIcon,
-    DockerIcon
+    DockerIcon,
+    OracleSQL,
+    Cicon
 } from "./logo";
 
 export default function TechStack() {
@@ -88,6 +90,12 @@ export default function TechStack() {
 
             <StackContainer><JavaIcon/><StackSubtitle>
                 Java
+            </StackSubtitle></StackContainer><StackDescription>
+            First programming language to learn, helped me to understand general structure,
+            syntax of object-oriented based and general development logic.</StackDescription>
+
+            <StackContainer><Cicon/><StackSubtitle>
+                Learned during my work at Softtek, we compiled C processes to write data to a DB and consult data through a middleware.
             </StackSubtitle></StackContainer><StackDescription>
             First programming language to learn, helped me to understand general structure,
             syntax of object-oriented based and general development logic.</StackDescription>
@@ -194,6 +202,16 @@ export default function TechStack() {
                 </StackSubDescription>
 
                 <StackSubcontainer>
+                    <WebLogic/>
+                    <StackSubtitle>
+                        WebLogic
+                    </StackSubtitle>
+                </StackSubcontainer>
+                <StackSubDescription>
+                   Learned during my work at Softtek.
+                </StackSubDescription>
+
+                <StackSubcontainer>
                     <RestIcon/>
                     <GraphIcon/>
                     <StackSubtitle>
@@ -218,6 +236,16 @@ export default function TechStack() {
     );
     const DataBases = (
         <SectionDown>
+            <StackContainer>
+                <OracleSQL/>
+                <StackSubtitle>
+                    Oracle SQL
+                </StackSubtitle>
+            </StackContainer>
+            <StackDescription>
+                Used during my work at Softtek.
+            </StackDescription>
+
             <StackContainer>
                 <MysqlIcon/>
                 <StackSubtitle>
@@ -272,6 +300,16 @@ export default function TechStack() {
             </StackContainer>
             <StackDescription>
                 Currently on a Debian based distribution, used 100% of the time.
+            </StackDescription>
+
+            <StackContainer>
+                <RedHatIcon/>
+                <StackSubtitle>
+                    RedHat
+                </StackSubtitle>
+            </StackContainer>
+            <StackDescription>
+                Learned batch processes systems started by a Cron demon to receive and send archives so as start C compiled processes during my work at Softtek.
             </StackDescription>
 
             <StackContainer>

@@ -1,15 +1,15 @@
 import {useState} from "react";
 import {LogoArrow} from "./logo";
 import Section, {FifTitle, FiTitle, FoTitle, SeTitle, SiTitle, ThTitle} from "./section";
-import {Bootcamp, Broker, Engineer, Finances, JetBrains, Pambolitos} from "./css";
+import {Bootcamp, Broker, Engineer, Finances, JetBrains, Pambolitos, Softtek} from "./css";
 
 import {Container, Heading, Image} from "@chakra-ui/react";
 
 //Timeline main components
 export default function Timeline() {
     //Timeline years
-    const years1 = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
-    const years2 = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+    const years1 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+    const years2 = [15, 16, 17, 18, 19, 20, 21, 22, 23]
     //Set especific timeline content when clicked hook
     const [content, setContent] = useState(null);
 
@@ -35,9 +35,11 @@ export default function Timeline() {
                     href={"#timeline_content"}
                     className="grid grid-rows-4 border-1-2 my-3">
                     <JetBrains onClick={() => setContent(BarContent_3)}/>
+
                     <div className="flex">
                         <Broker onClick={() => setContent(BarContent_1)}/>
                         <Bootcamp onClick={() => setContent(BarContent_5)}/>
+                        <Softtek onClick={() => setContent(BarContent_6)}/>
                     </div>
                     <Pambolitos onClick={() => setContent(BarContent_2)}/>
                     <div className="flex">
@@ -47,8 +49,9 @@ export default function Timeline() {
                 </a>
 
                 {/*Vertical bars on timeline*/}
-                <div className="grid grid-cols-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
-                    {[...Array(10)].map((id, i) =>
+                <div
+                    className="grid grid-cols-9 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
+                    {[...Array(9)].map((id, i) =>
                         <div key={i} className="flex items-center justify-center">
                             |
                         </div>)}
@@ -169,17 +172,22 @@ const BarContent_3 = () => {
                 <ThTitle>
                     <div className="flex my-px subpixel-antialiased animate-pulse">
                         <Heading
-                            className="sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
-                            KOTLIN
+                            className="sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-red-600 px-2">
+                            JAVA
                         </Heading>
                         _
                         <Heading
-                            className="sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
+                            className="sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-400 px-2">
                             PYTHON
                         </Heading>
                         _
                         <Heading
-                            className="sm:text-xd bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
+                            className="sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-800 via-pink-700 to-pink-500 pr-2">
+                            KOTLIN
+                        </Heading>
+                        _
+                        <Heading
+                            className="sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-400 px-2">
                             JS
                         </Heading>
                     </div>
@@ -250,6 +258,36 @@ const BarContent_5 = () => {
             </FifTitle>
 
 
+        </div>
+    )
+}
+const BarContent_6 = () => {
+    return (
+        <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
+            <div className="mb-0 p-5 flex flex-col">
+                <FiTitle><Heading className="text-xl text-gray-500 ">
+                    03/2022 - Present
+                </Heading></FiTitle>
+                <SeTitle><Heading
+                    className="text-2xl sm:text-3xl text-white bg-gradient-to-r from-blue-700 via-green-600 to-transparent subpixel-antialiased px-2">
+                    SOFTTEK
+                </Heading></SeTitle>
+                <ThTitle><Heading
+                    className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500 animate-pulse">
+                    Tech Company
+                </Heading></ThTitle>
+                <FoTitle><p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white ">
+                    <LogoArrow/>
+                    Software Developer for Citigroup account
+                </p></FoTitle>
+                <FoTitle><p className={"px-10 animate-pulse hover:cursor-pointer hover:text-yellow-400 text-xl"}><LogoArrow/>Details</p></FoTitle>
+            </div>
+            <FifTitle>
+                <a href={"https://www.softtek.com/"}>
+                    <Image src={'/softtek.png'} width={150} height={140} alt="logo" className="animate-pulse"/>
+                </a>
+
+            </FifTitle>
         </div>
     )
 }
