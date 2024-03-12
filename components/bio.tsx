@@ -25,7 +25,10 @@ const Bio = () => {
                     />
                 </div>
             </div>
-
+            <div className="flex items-center gap-2 p-2 rounded-md">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <p className="text-md font-medium text-white font-bold">Currently looking for job offers</p>
+            </div>
             <div className="mt-2 flex flex-col flex-wrap backdrop-blur rounded-lg">
                 <div>
                     <Heading className="text-2xl  text-white text-green-500 select-none font-mono">

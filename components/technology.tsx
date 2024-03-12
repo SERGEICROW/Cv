@@ -93,13 +93,6 @@ export default function TechStack() {
             </StackSubtitle></StackContainer><StackDescription>
             First programming language to learn, helped me to understand general structure,
             syntax of object-oriented based and general development logic.</StackDescription>
-
-            <StackContainer><Cicon/><StackSubtitle>
-                Learned during my work at Softtek, we compiled C processes to write data to a DB and consult data through a middleware.
-            </StackSubtitle></StackContainer><StackDescription>
-            First programming language to learn, helped me to understand general structure,
-            syntax of object-oriented based and general development logic.</StackDescription>
-
             <StackContainer><KotlinIcon/><StackSubtitle>
                 Kotlin
             </StackSubtitle></StackContainer><StackDescription>

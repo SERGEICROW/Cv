@@ -1,12 +1,9 @@
-import Section, {FiTitle, SectionLeft, SectionRight} from "../../components/section";
-import {Details, Description, Title, WorkImage, GithubImage} from "../../components/projectComps";
+import {FiTitle, SectionLeft, SectionRight} from "../../components/section";
+import {Details, Description, Title} from "../../components/projectComps";
 import {
-    CssIcon,
-    HtmlIcon, JavaIcon, JsIcon,
-    JsonIcon, OracleSQL,
-    ProjectArrow,
-    Cicon, RedHatIcon,
-    RestIcon, SqliteIcon, WebLogic
+    JavaIcon, OracleSQL,
+    ProjectArrow, Cicon,
+    RedHatIcon, WebLogic
 } from "../../components/logo";
 
 import {Container, Heading, Link} from "@chakra-ui/react";
@@ -38,7 +35,7 @@ const Softtek = () => (
                     <SectionRight><Description>
                         As part of Citigroup's separation from "Banamex bank", the project consisted in the data and logic segregation and migration of the system to new enviroments
                         and servers, i was assigned 2 inner systems in charge of electronic fund transfers and domiciliation, i developed skills in batch process systems, middleware,
-                        security systems, remote deploying along with people from the US and India, code analisis and optimization, testing matrices and test cases,
+                        security systems, Hardware security modules integrations, remote deploying along with people from the US and India, code analisis and optimization, testing matrices and test cases,
                         under agile methodology.
                     </Description></SectionRight>
 

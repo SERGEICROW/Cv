@@ -3,37 +3,22 @@ import styled from "@emotion/styled";
 //Timeline bars styling for position inside timeline
 //Jetbrains
 const Bar0 = styled("hr")`
-  width: 34%;
-  margin-left: 61%;
-  height: 15px;`
-//Broker
-const Bar1 = styled("hr")`
-  width: 32%;
-  margin-left: 11%;
+  width: 20%;
+  margin-left: 14%;
   height: 15px;`
 //Bootcamp
 const Bar2 = styled("hr")`
-  width: 9%;
-  margin-left: 30%;
-  height: 15px;`
-//Pambolitos
-const Bar3 = styled("hr")`
-  width: 20%;
-  margin-left: 40%;
-  height: 15px;`
-//Finances
-const Bar4 = styled("hr")`
-  width: 12%;
-  margin-left: 5%;
+  width: 14%;
+  margin-left: 23%;
   height: 15px;`
 //Engineer
 const Bar5 = styled("hr")`
-  width: 29%;
-  margin-left: 49%;
+  width: 75%;
+  margin-left: 15%;
   height: 15px;`
 //Softtek
 const Bar6 = styled("hr")`
-  width: 10%;
+  width: 50%;
   margin-left: 3%;
   height: 15px;`
 
@@ -44,25 +29,10 @@ export const JetBrains = ({...props}) => {
                 transition duration-500 ease-in-out transform hover:scale-110 hover:hue-rotate-180"
                  {...props}/>
 }
-export const Broker = ({...props}) => {
-    return <Bar1 className="rounded-full border-0 cursor-pointer my-0.5
-                    bg-gradient-to-r from-blue-900 to-blue-600 transition duration-500 ease-in-out
-                    transform hover:scale-110 hover:animate-pulse hover:hue-rotate-180" {...props}/>
-}
 export const Bootcamp = ({...props}) => {
     return <Bar2 className="rounded-full border-0 cursor-pointer my-0.5
                     bg-gradient-to-r from-yellow-300 to-green-400 transition duration-500 ease-in-out
                     transform hover:hue-rotate-180 hover:scale-110 hover:animate-pulse" {...props}/>
-}
-export const Pambolitos = ({...props}) => {
-    return <Bar3 className="rounded-full border-0 cursor-pointer my-0.5
-                bg-gradient-to-r from-yellow-500 to-yellow-500 transition duration-500 ease-in-out
-                transform hover:hue-rotate-180 hover:scale-110 hover:animate-pulse" {...props}/>
-}
-export const Finances = ({...props}) => {
-    return <Bar4 className="rounded-full border-0 cursor-pointer my-0.5
-                    bg-gradient-to-r from-black via-green-700 to-green-700 transition duration-500
-                    ease-in-out transform hover:hue-rotate-180 hover:scale-110 hover:animate-pulse" {...props}/>
 }
 export const Engineer = ({...props}) => {
     return <Bar5 className="rounded-full border-0 cursor-pointer my-0.5

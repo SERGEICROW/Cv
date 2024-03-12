@@ -1,15 +1,15 @@
 import {useState} from "react";
 import {LogoArrow} from "./logo";
 import Section, {FifTitle, FiTitle, FoTitle, SeTitle, SiTitle, ThTitle} from "./section";
-import {Bootcamp, Broker, Engineer, Finances, JetBrains, Pambolitos, Softtek} from "./css";
+import {Bootcamp, Engineer, JetBrains, Softtek} from "./css";
 
 import {Container, Heading, Image} from "@chakra-ui/react";
 
 //Timeline main components
 export default function Timeline() {
     //Timeline years
-    const years1 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
-    const years2 = [15, 16, 17, 18, 19, 20, 21, 22, 23]
+    const years1 = [2021, 2022, 2023, 2024]
+    const years2 = [21, 22, 23, 24]
     //Set especific timeline content when clicked hook
     const [content, setContent] = useState(null);
 
@@ -26,37 +26,30 @@ export default function Timeline() {
             )
         }
     }
-
     return (
         <Container className="flex flex-col flex-shrink text-white backdrop-blur-sm">
             <Section>
                 {/*BARS*/}
                 <a
                     href={"#timeline_content"}
-                    className="grid grid-rows-4 border-1-2 my-3">
+                    className="grid grid-rows-3 border-1-2 my-3">
                     <JetBrains onClick={() => setContent(BarContent_3)}/>
-
                     <div className="flex">
-                        <Broker onClick={() => setContent(BarContent_1)}/>
                         <Bootcamp onClick={() => setContent(BarContent_5)}/>
                         <Softtek onClick={() => setContent(BarContent_6)}/>
                     </div>
-                    <Pambolitos onClick={() => setContent(BarContent_2)}/>
                     <div className="flex">
-                        <Finances onClick={() => setContent(BarContent_0)}/>
                         <Engineer onClick={() => setContent(BarContent_4)}/>
                     </div>
                 </a>
-
                 {/*Vertical bars on timeline*/}
                 <div
-                    className="grid grid-cols-9 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
-                    {[...Array(9)].map((id, i) =>
+                    className="grid grid-cols-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-white">
+                    {[...Array(4)].map((id, i) =>
                         <div key={i} className="flex items-center justify-center">
                             |
                         </div>)}
                 </div>
-
                 <hr className="relative bottom-1"/>
                 {/*Responsive years*/}
                 <div className="flex justify-around mb-2 font-bold text-sm">
@@ -71,89 +64,18 @@ export default function Timeline() {
                         );
                     })}
                 </div>
-
                 <div className="h-56 sm:h-e">
-
                     <div className="mx-7" id={"timeline_content"}>
                         <Refresh>
                             {content}
                         </Refresh>
                     </div>
-
                 </div>
-
             </Section>
         </Container>
     )
 }
 
-const BarContent_0 = () => {
-    return (
-        <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
-            <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-xl text-gray-400">
-                    2013 - 2016
-                </Heading>
-                <Heading className="text-2xl sm:text-3xl text-red-700">
-                    UVM
-                </Heading>
-                <Heading className="text-xl">
-                    Finances and banking degree
-                </Heading>
-                <p className="sm:text-lg sm:pl-5 text-white text-justify text-gray-200">
-                    <LogoArrow/>
-                    Truncated
-                </p>
-            </div>
-        </div>
-    )
-}
-const BarContent_1 = () => {
-    return (
-        <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
-            <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-xl text-gray-400">
-                    06/2015 - 04/2018
-                </Heading>
-                <Heading
-                    className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
-                    Financial Institutions
-                </Heading>
-                <Heading className="text-xl">
-                    Broker/Sells
-                </Heading>
-                <p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white text-gray-200 sm:leading-5">
-                    <LogoArrow/>
-                    Financial instruments and mortgage loans sells & consulting.
-                </p>
-            </div>
-
-        </div>
-    )
-}
-const BarContent_2 = () => {
-    return (
-        <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
-            <div className="mb-0 p-5 flex flex-col">
-                <Heading className="text-xl text-gray-400">
-                    2018 - 2020
-                </Heading>
-                <Heading
-                    className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-red-500">
-                    Los Pambolitos
-                </Heading>
-                <Heading className="text-xl">
-                    Mexican Restaurant
-                </Heading>
-                <p className="sm:text-lg sm:pl-5 text-white text-justify">
-                    <LogoArrow/>
-                    Owner and Manager
-                </p>
-            </div>
-            <Image src={'/pambolitos.png'} width={160} height={150} alt="logo" className={"rounded-md"}/>
-        </div>
-    )
-}
 const BarContent_3 = () => {
     return (
         <div className="flex items-center justify-around content-center flex-wrap bg-black rounded-lg bg-opacity-40">
@@ -167,7 +89,6 @@ const BarContent_3 = () => {
                         Jetbrains
                         <Heading className="text-3xl sm:text-3xl font-bold pl-8">Academy</Heading>
                     </Heading>
-
                 </SeTitle>
                 <ThTitle>
                     <div className="flex my-px subpixel-antialiased animate-pulse">
@@ -278,7 +199,7 @@ const BarContent_6 = () => {
                 </Heading></ThTitle>
                 <FoTitle><p className="w-56 sm:w-64 sm:text-lg sm:pl-5 text-white ">
                     <LogoArrow/>
-                    Software Developer for Citigroup account
+                    Backend software developer and technical leader for Citigroup account
                 </p></FoTitle>
                 <FoTitle><p className={"px-10 animate-pulse hover:cursor-pointer hover:text-yellow-400 text-xl"}><LogoArrow/>Details</p></FoTitle>
             </div>
